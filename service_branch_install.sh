@@ -27,7 +27,7 @@ cd ".."
 rm -rf "$INSTALL_DIR"
 
 # Set the CVS environment variables:
-export CVSROOT=:ext:apc@drago:/var/lib/cvsroot
+export CVSROOT=:ext:user@server:/var/lib/cvsroot
 export CVS_RSH=ssh
 
 # Checkout the first module:
@@ -54,7 +54,7 @@ then
 		# Create the database "service":
 		mysqladmin create service
 		# Give the user "service_user" privileges to use the database:
-		mysql --execute="grant all on service.* to 'service_user'@'localhost' identified by 'password';"
+		mysql --execute="grant all on service.* to 'service_user'@'localhost' identified by '*****';"
 		mysql --execute="flush privileges"
 		# Use the awk script "convert.sh" to cleanup the output of PostgreSQL's "pg_dump" tool
 		# into something useable for MySQL:
