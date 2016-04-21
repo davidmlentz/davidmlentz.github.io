@@ -1,0 +1,86 @@
+﻿INSTALLATION
+
+Building a Digibuddy (updated 20070302):
+
+(This process takes about 20 minutes on a 2.4GHz machine, 20x CD-ROM.)
+
+1.  Install Debian 3.1 from Netinst CD, w/no optional packages.
+
+When installation is complete, log in as "root" and continue.
+
+
+2a.  Add user dcr, password=****
+
+	digibuddy:~# adduser dcr
+		...follow prompts...
+
+
+2b.  Add user digibuddy, password=****
+
+	digibuddy:~# adduser digibuddy
+		...follow prompts...
+
+
+3.  Load "APC Install Disc 2" and type:
+
+	digibuddy:~# mount -o exec /dev/hdc
+	digibuddy:~# /media/cdrom0/apc_create.sh apc_0_9_4_branch
+	
+	(Accept all defaults.)
+	
+
+4.  When the Digibuddy pauses with the prompt: 
+		vmc@shell.modwest.com's password
+	...type the password "****" to continue.
+
+
+5.  When installation is complete, type this command:
+
+	digibuddy:~# crontab -e
+
+	This will open a text editor.  Type the following:
+	
+	1 0 * * * /usr/lib/cgi-bin/apc/affidavitAutoGetYesterday.cgi
+	2 4 * * * /usr/lib/cgi-bin/apc/setclock.sh
+	
+	...then hold down CTRL and SHIFT, and type "X".
+	
+	The editor will ask:
+	Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES)?
+	
+	Type "Y", then ENTER.
+
+
+6.  Type this command:
+
+	digibuddy:~# /usr/lib/cgi-bin/apc/setclock.sh
+	
+	This will set the 974's clock to match the clock on the Digibuddy.
+	This script will run again each night to keep the clock accurate.
+
+
+7.  Restart the Digibuddy:
+
+	digibuddy:~# shutdown -r now
+	
+
+8.	Connect the DCR-974's ethernet port to the Digibuddy's eth1 port using an ethernet crossover cable.
+
+
+9.	Use the DCR-974's front-panel controls to configure the IP settings as follows:
+
+IP address: 192.168.210.1
+NCS UDP Port: 09740
+Concole UDP Port: 09741
+
+Restart the receiver to make sure these settings take effect.
+
+
+10.	Point a browser to 192.168.3.99 to test your Digibuddy installation.  Log in with the username "admin" 
+and the password "****".  As soon as you've logged in, click the "change my password" link to 
+choose a new password for this account.
+
+Next, click the "Back up" link under "Receiver file inventory" on the left side of the screen.  Follow 
+the prompts to complete the receiver backup.
+
+The backup process may take 10 - 20 minutes, depending on the file inventory of your receiver.
