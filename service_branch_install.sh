@@ -7,7 +7,6 @@
 #			and to be converted by the script convert.sh and imported into mysql
 
 # If no tag name was provided, scold and exit:
-#if [ $# -ne 2 ]; then
 if [ $# -lt 2 ]; then
 	echo 1>&2 Usage: apc_branch_install.sh BRANCH_NAME
 	exit 1
