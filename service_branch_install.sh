@@ -39,9 +39,9 @@ touch "$INSTALL_DIR"/publication_date
 echo $1 >> "$INSTALL_DIR"/publication_date
 
 # IMPORTANT SECURITY FUNCTION: Move the config files outside the document root:
-# cp "$INSTALL_DIR"/conf/digibuddy.ini "$INI_FILE_LOCATION"
+cp "$INSTALL_DIR"/conf/digibuddy.ini "$INI_FILE_LOCATION"
 
-# Probably not necessary:
+# This is probably not necessary. If you determine that it's helpful for your configuration, uncomment:
 # /usr/sbin/apache2ctl restart
 
 # Recreate the database:
