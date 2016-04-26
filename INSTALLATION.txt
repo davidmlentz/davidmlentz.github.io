@@ -84,7 +84,6 @@ Restart the receiver to make sure these settings take effect.
 10.	Point a browser to 192.168.3.99 to test your Digibuddy installation.  Log in with the username "admin" and the
 password "****".  As soon as you've logged in, click the "change my password" link to  choose a new password for this account.
 
-Next, click the "Back up" link under "Receiver file inventory" on the left side of the screen.  Follow 
-the prompts to complete the receiver backup.
+Next, click the "Back up" link under "Receiver file inventory" on the left side of the screen.  Follow the prompts to complete the receiver backup.
 
 The backup process may take 10 - 20 minutes, depending on the file inventory of your receiver.
