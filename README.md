@@ -3,8 +3,8 @@ This is the portfolio site of David M. Lentz (davidmlentz@gmail.com). The purpos
 
 ## Software Procedures: Freemake Video Converter
 As a final project for a software documentation class, I created these documents that describe how to use a program called Freemake Video Converter.
-- [Software Procedures 1](http://davidmlentz.github.io/software_procedures1.html) | 
-- [Software Procedures 2](http://davidmlentz.github.io/software_procedures2.html) | 
+- [Software Procedures 1](http://davidmlentz.github.io/software_procedures1.html)
+- [Software Procedures 2](http://davidmlentz.github.io/software_procedures2.html)
 - [Software Procedures 3](http://davidmlentz.github.io/software_procedures3.html)
 
 ## Software Procedures: PowerPoint
