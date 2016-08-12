@@ -1,15 +1,15 @@
 # davidmlentz.github.io
 This is the portfolio site of David M. Lentz (davidmlentz@gmail.com). The purpose of this portfolio is to compile and display my recent work in the field of technical communication.
 
-## Developer documentation
-This commented shell script explains what a developer needs to know to install this PHP application.
-- [service_branch_install.sh](http://davidmlentz.github.io/service_branch_install.sh)
-
 ## Technical documentation
 These files comprise an installation package and guide technical staff in setting up a satellite downlink.
 - [apc_create.sh](http://davidmlentz.github.io/apc_create.sh)
 - [INSTALLATION.txt](http://davidmlentz.github.io/INSTALLATION.txt)
 - [README.txt](http://davidmlentz.github.io/README.txt)
+
+## Developer documentation
+This commented shell script explains what a developer needs to know to install this PHP application.
+- [service_branch_install.sh](http://davidmlentz.github.io/service_branch_install.sh)
 
 ## Software Procedures: Freemake Video Converter
 As a final project for a software documentation class, I created these documents that describe how to use a program called Freemake Video Converter.
