@@ -12,7 +12,7 @@ To complete this guide, you should have access to a clean Ubuntu 14.04 server in
 
 When you are ready to continue, log into your server with your `sudo` user and get started below.
 
-## Install the server components
+## Step 1 — Install the server components
 
 In this section, we'll install the programs that support MediaWiki (which we'll install a little later). First, let's make sure your server is up to date. (You may be prompted for your `sudo` password at this point, but you should only have to enter it once.)
 
@@ -50,7 +50,7 @@ After that, you can accept the default answers on the remaining questions by jus
 
 ![Reload privileges tables prompt](http://i.imgur.com/fcTWtw4.png "Reload privileges tables prompt")
 
-## Configure MySQL and Create Credentials for MediaWiki
+## Step 2 — Configure MySQL and Create Credentials for MediaWiki
 
 We've installed MySQL, which is the database MediaWiki uses to store content. Now let's configure it so it's ready to use. First, set up some initial tables:
 
@@ -86,7 +86,7 @@ Next you'll be asked to configure the database. We've already done that, so choo
 
 ![phpMyAdmin database configuration](http://i.imgur.com/dwkjrZH.png "phpMyAdmin database configuration")
 
-## Configure PHP-FPM and Lighttpd
+## Step 3 — Configure PHP-FPM and Lighttpd
 
 `PHP-FPM` and `lighttpd` (which, by the way, is pronounced "lighty") will give MediaWiki the web server and server-side processing it requires. In this section, we'll 
 get those pieces configured properly.
@@ -123,7 +123,7 @@ Now that we've modified these files, we need to tell `lighttpd` to reload its co
 
 	sudo /etc/init.d/lighttpd force-reload
 
-## Install MediaWiki
+## Step 4 — Install MediaWiki
 
 Now we're ready to install MediaWiki. First, move into the right directory:
 
