@@ -5,6 +5,9 @@ In my current job, I create documents for the WordPress Support team at Boise St
 * [Switching a WordPress Site From Jetpack-Based Subscriptions to Mailchimp](https://github.com/OITWPsupport/documentation/blob/master/Moving%20Site%20Subscriptions%20to%20Mailchimp.md)
 * [Boise State uPay Gravity Forms Extension for LSAMP](https://github.com/OITWPsupport/boise-state-uPay-Gravity-Forms-Extension-for-LSAMP/blob/master/docs/developerhowto.md)
 
+I wrote this article helping users configure virtual servers:
+* [How To Set Up the Latest MediaWiki with Lighttpd on Ubuntu 14.04](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/How%20To%20Set%20Up%20the%20Latest%20MediaWiki%20with%20Lighttpd%20on%20Ubuntu%2014.04.md)
+
 I recently completed an MA in technical communication. As part of my coursework, I created user documentation:
 * Freemake Video Converter
     * [Making Slideshows and Visualizations](http://davidmlentz.github.io/software_procedures1.html)
