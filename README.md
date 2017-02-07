@@ -16,8 +16,9 @@ I recently completed an MA in technical communication. As part of my coursework,
 * PowerPoint
     * [Using the Slide Master in PowerPoint 2007](http://davidmlentz.github.io/PowerPoint.pdf)
 
+Here’s a white paper I wrote as a final project one semester:
+* [Telemedicine and Business Efficiency: Improving Patient Outcomes](http://davidmlentz.github.io/white_paper.pdf)
+
 I also studied content management and wrote a bit about it:
 * [How XML Supports a Unified Content Strategy](http://davidmlentz.github.io/HowXMLSupportsaUnifiedContentStrategy.pdf)
 
-Here’s a white paper I wrote as a final project one semester:
-* [Telemedicine and Business Efficiency: Improving Patient Outcomes](http://davidmlentz.github.io/white_paper.pdf)
