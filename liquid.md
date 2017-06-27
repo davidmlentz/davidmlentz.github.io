@@ -1,11 +1,8 @@
-# Liquid.md
-Liquid.md
+# Displaying custom messages with the case tag
 
-The `case` logic tag can help you easily customize the content of the pages your users see. Combined with `when` and `else`, 
-`case` allows you to present different messages in different circumstances. This can be useful, for example, when you want to 
-tailor a message on the order status page of checkout to users based on their country.
+The `case` tag can help you easily customize your content. Combined with `when` and `else`, `case` allows you to present different messages in different circumstances. This can be useful, for example, when you want to tailor a message on the order status page of checkout to users based on their country.
 
-Case functions as if...then logic. For example, ...
+Case functions as if...then logic. In the example below, the page displays a custom greeting based on the value of the country variable. 
 
 ```liquid
 {% assign country = 'GB' %}
