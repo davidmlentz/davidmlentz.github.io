@@ -13,6 +13,7 @@ I wrote this article helping users configure virtual servers:
 In my current job, I create documents for the WordPress Support team at Boise State University:
 * [Switching a WordPress Site From Jetpack-Based Subscriptions to Mailchimp](https://github.com/OITWPsupport/documentation/blob/master/Moving%20Site%20Subscriptions%20to%20Mailchimp.md)
 * [Boise State uPay Gravity Forms Extension for LSAMP](https://github.com/OITWPsupport/boise-state-uPay-Gravity-Forms-Extension-for-LSAMP/blob/master/docs/developerhowto.md)
+* [Creating and Configuring a Woocommerce Site at Boise State](https://github.com/OITWPsupport/documentation/blob/master/WooCommerce.md)
 
 
 <!-- 
