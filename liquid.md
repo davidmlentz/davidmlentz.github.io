@@ -1,8 +1,8 @@
 # Displaying custom messages with the case tag
 
-The `case` tag can help you easily customize your content. Combined with `when` and `else`, `case` allows you to present different messages in different circumstances. This can be useful, for example, when you want to tailor a message on the order status page of checkout to users based on their country.
+The `case` tag can help you easily customize your content. Combined with `when` and `else`, `case` allows you to present different messages in different circumstances. This can be useful, for example, when you want to tailor a message to a shopper based on their country.
 
-Case functions as if...then logic. In the example below, the page displays a custom greeting based on the value of the country variable. 
+In the example below, the page displays a custom greeting based on the value of the `country` variable. 
 
 ```liquid
 {% assign country = 'GB' %}
@@ -12,7 +12,7 @@ Case functions as if...then logic. In the example below, the page displays a cus
 {% when 'AU' %}
         G'day.
 {% when 'GB' %}
-        Ello.
+        'Ello.
 {% when 'US' %}
         Hi.
 {% else %}
