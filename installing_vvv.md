@@ -15,10 +15,10 @@ This process uses [Vagrant](https://www.vagrantup.com/), which allows you to cre
 ## Using your Local Development Environment
 VVV is now running locally, which means you can access several versions of the WordPress application and the WordPress core source code. Click the links below to explore your VVV environment.
 + [http://vvv.dev] Your VVV home page. Links to local dev sites and admin tools.
-+ [http://local.wordpress.dev/] for WordPress stable
-+ [http://local.wordpress-trunk.dev/] for WordPress trunk. (TODO: this site does not come up.)
-+ [http://src.wordpress-develop.dev/] for trunk WordPress development files
-+ [http://build.wordpress-develop.dev/] for the version of those development files built with Grunt
++ [http://local.wordpress.dev/] for WordPress stable.
++ [http://local.wordpress-trunk.dev/] for WordPress trunk.
++ [http://src.wordpress-develop.dev/] for trunk WordPress development files.
++ [http://build.wordpress-develop.dev/] for the version of those development files built with Grunt.
 
 You can use your IDE to change any of the files in the environment, developing features and bugfixes and testing them locally. To learn how to contribute your changes back to the WordPress project, see the next section.
 ## Using GitHub to Contribute Changes to WordPress Core
