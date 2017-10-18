@@ -5,7 +5,7 @@ From the original document, [here](https://make.wordpress.org/core/handbook/tuto
 ## Overview
 The objectives of the procedure described here are to 1) create a local WordPress installation where you can do development and design work and 2) contribute that work to the WordPress core project.
 
-This process uses [Vagrant](https://www.vagrantup.com/), a tool for building and distributing development environments. Vagrant provides an environment that isn’t specific to WordPress (or any other application), so you’ll also use [VVV](https://varyingvagrantvagrants.org/), “an open source Vagrant configuration focused on WordPress development.”
+This process uses [Vagrant](https://www.vagrantup.com/), which allows you to create a sandboxed development environment on your computer. Vagrant provides an environment that isn’t specific to WordPress (or any other application), so you’ll also use [VVV](https://varyingvagrantvagrants.org/) to configure your Vagrant environment specifically for WordPress development.
 ## Installing and Configuring VVV
 1. **Install Vagrant.** [Download Vagrant from this site](https://www.vagrantup.com/downloads.html) and install it on your machine.
 1. **Install Virtualbox.** [Download VirtualBox from this site](https://www.virtualbox.org/wiki/Downloads) and install it on your machine.
