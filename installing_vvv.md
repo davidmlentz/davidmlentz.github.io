@@ -23,11 +23,11 @@ VVV is now running locally, which means you can access several versions of the W
 You can use your IDE to change any of the files in the environment, developing features and bugfixes and testing them locally. To learn how to contribute your changes back to the WordPress project, see the next section.
 ## Using GitHub to Contribute Changes to WordPress Core
 You can create a GitHub repository to store your copy of the WordPress core source code. This is where you’ll commit any changes that you intend to contribute to the WordPress core project. Those changes must be associated with a Trac ticket and created in a feature branch named after the ticket's ID. 
-## Configuring your VVV instance
+### Configuring your VVV instance
 1. **Switch Your VVV to Git.** Your VVV instance includes an SVN repo; change it to Git: vagrant ssh -c develop_git
 1. **Create a GitHub repository.** Create a new "wordpress-develop” repository in your GitHub account.
 1. **Set Your GitHub Origin.** Set this new repo as your origin remote: cd www/wordpress-develop && git remote set-url origin https://github.com/YOURNAME/wordpress-develop.git && git remote add upstream git://develop.git.wordpress.org/
-## Contributing a feature or bug fix
+### Contributing a feature or bug fix
 1. **Base your work on a Trac ticket.** Find (or create) a Trac ticket describing the feature or bugfix you’ll work on.
 1. **Do your work in a feature branch.** Create a feature branch for this ticket (e.g. 12345) in your GitHub "wordpress-develop” repository: `git checkout -b trac-12345`
 1. **Make your changes in VVV.** Develop and test your feature or bugfix in your VVV clone.
