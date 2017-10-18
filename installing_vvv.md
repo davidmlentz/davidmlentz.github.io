@@ -9,7 +9,7 @@ This process uses [Vagrant](https://www.vagrantup.com/), which allows you to cre
 ## Installing and Configuring VVV
 1. **Install Vagrant.** [Download Vagrant from this site](https://www.vagrantup.com/downloads.html) and install it on your machine.
 1. **Install Virtualbox.** [Download VirtualBox from this site](https://www.virtualbox.org/wiki/Downloads) and install it on your machine.
-1. **Install Vagrant plugins.** There are many plugins available to extend Vagrant’s functionality. To install a few useful for this procedure, type: `vagrant plugin install vagrant-hostsupdater vagrant-triggers`.
+1. **Install Vagrant plugins.** There are many plugins available to extend Vagrant’s functionality. To install a few that will be useful below, type: `vagrant plugin install vagrant-hostsupdater vagrant-triggers`.
 1. **Install VVV.** Clone the VVV GitHub repo to install it on your machine. Type this command: `git clone git://github.com/Varying-Vagrant-Vagrants/VVV.git vagrant-local`.
 1. **Launch VVV.** Execute this command: `cd vagrant-local && vagrant up`. As this command runs, you’ll be prompted for a root password to allow VVV to make necessary changes to your hosts file.
 ## Using your Local Development Environment
