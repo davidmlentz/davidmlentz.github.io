@@ -18,6 +18,8 @@ Follow the [Handbooks Style and Formatting Guide](https://make.wordpress.org/doc
 # Contributing Code
 Like any other website, HelpHub requires design and development work. Your contributions in these areas can assure that HelpHub is as performant and usable as possible. 
 
+To facilitate the work of many volunteer developers, HelpHub uses [Varying Vagrant Vagrants (VVV)](https://varyingvagrantvagrants.org/) so developers can easily create a local WordPress environment. Follow the steps in this section to create your development environment and contribute code to the HelpHub project.
+
 ## Installing VVV
 ### Overview
 The objectives of the procedure described here are to 1) create a local WordPress installation where you can do development and design work and 2) contribute that work to the WordPress core project.
@@ -38,6 +40,8 @@ VVV is now running locally, which means you can access several versions of the W
 + [http://build.wordpress-develop.dev/] for the version of those development files built with Grunt.
 
 You can use your IDE to change any of the files in the environment, developing features and bugfixes and testing them locally. To learn how to contribute your changes back to the WordPress project, see the next section.
+
+<!---
 ### Using GitHub to Contribute Changes to WordPress Core
 You can create a GitHub repository to store your copy of the WordPress core source code. This is where you’ll commit any changes that you intend to contribute to the WordPress core project. Those changes must be associated with a Trac ticket and created in a feature branch named after the ticket's ID. 
 #### Configuring Your VVV Instance
@@ -51,16 +55,17 @@ You can create a GitHub repository to store your copy of the WordPress core sour
 1. **Commit your changes.** Commit your revised code to your GitHub "wordpress-develop” repository.
 1. **Create a pull request.** Merge your commits into master from your feature branch.
 1. **Update the Trac ticket.** Paste the URL of that pull request into the Trac ticket and attach the diff file corresponding to your pull request.
+--->
 
 ### Using GitHub to Contribute Design and Development to HelpHub
 If you’re interested in contributing to HelpHub as a developer, you can assign yourself an [issue from the GitHub repo](https://github.com/Kenshino/HelpHub/issues) and contribute code to fix a bug or add a feature.
-1. Fork the HelpHub source code from https://github.com/Kenshino/HelpHub. This is where you’ll commit any changes that you intend to contribute to the HelpHub project. (Note: the process for contributing content is different. See below.) The first step in contributing code to the HelpHub project is to create your own fork of the repository.
-1. Build a local WP install. Could use VVV or any other.
-1. Configuring your VVV instance: See "Configuring your VVV instance.”
-1. Empty out wp-content: cd wp-content; rm -rf *
-1. From within wp-content, clone your fork of the HelpHub repo
-1. make changes, commit
-1. pull request
+1. **Fork the project.** Create a fork of the HelpHub source code from https://github.com/Kenshino/HelpHub. This fork is where you’ll commit any changes that you intend to contribute to the HelpHub project. (Note: the process for contributing content is different. See "Contributing Content," above.)
+1. **Create a local environment.** See "Installing and Configuring VVV," above.
+1. **Empty wp-content.** In your development environment, remove all files from wp-content: `cd wp-content && rm -rf *`
+1. **Clone your fork locally.** Within wp-content, clone your fork of the HelpHub repo: `git clone https://github.com/[githubusername]/HelpHub.git`
+1. **Make your changes in VVV.** Develop and test your feature or bugfix in your VVV clone.
+1. **Commit your changes.** Commit your revised code to your HelpHub fork.
+1. **Create a pull request.** Reqiest to merge your commits into the HelpHub repo from your fork.
 #### Development guidelines
 1. A11y
 1. Responsive
