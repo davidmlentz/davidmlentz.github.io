@@ -2,7 +2,7 @@
 From the original document, [here](https://make.wordpress.org/core/handbook/tutorials/installing-a-local-server/installing-vvv/).
 
 # Overview
-## What is HelpHub
+## What is HelpHub?
 HelpHub ([wp-helphub.com](https://wp-helphub.com/)) is the online manual for WordPress. It replaces the WordPress Codex. HelpHub is created and maintained by volunteer contributors, and your contributions are welcomed. This document describes the ways which you can contribute. See [Contributing to the Docs Team](https://github.com/Kenshino/HelpHub/blob/master/CONTRIBUTING.md) for more information on contributing to HelpHub.
 
 # Contributing Content
@@ -10,7 +10,7 @@ HelpHub is a living repository of articles and guides, publicly available at [wp
 
 
 ## Access to the Site
-To gain access as a HelpHub author or editor, visit https://wordpress.slack.com/ and send a message to @kenshino requesting an account.
+To gain access as a HelpHub author or editor, [join the WordPress team on Slack](https://make.wordpress.org/chat/). Join the #docs channel and introduce yourself. Someone there can provide access to HelpHub.
 
 ## Style
 Follow the [Handbooks Style and Formatting Guide](https://make.wordpress.org/docs/handbook/developer-resources/handbooks/handbooks-style-and-formatting-guide/) to make your HelpHub content as usable as possible.
@@ -39,7 +39,7 @@ VVV is now running locally, which means you can access several versions of the W
 + [http://src.wordpress-develop.dev/] for trunk WordPress development files.
 + [http://build.wordpress-develop.dev/] for the version of those development files built with Grunt.
 
-You can use your IDE to change any of the files in the environment, developing features and bugfixes and testing them locally. To learn how to contribute your changes back to the WordPress project, see the next section.
+You can use your IDE to change any of the files in the environment, developing features and bugfixes and testing them locally. To learn how to contribute your changes back to the HelpHub project, see the next section.
 
 <!---
 ### Using GitHub to Contribute Changes to WordPress Core
@@ -57,9 +57,12 @@ You can create a GitHub repository to store your copy of the WordPress core sour
 1. **Update the Trac ticket.** Paste the URL of that pull request into the Trac ticket and attach the diff file corresponding to your pull request.
 --->
 
-### Using GitHub to Contribute Design and Development to HelpHub
-If you’re interested in contributing to HelpHub as a developer, you can assign yourself an [issue from the GitHub repo](https://github.com/Kenshino/HelpHub/issues) and contribute code to fix a bug or add a feature.
-1. **Fork the project.** Create a fork of the HelpHub source code from https://github.com/Kenshino/HelpHub. This fork is where you’ll commit any changes that you intend to contribute to the HelpHub project. (Note: the process for contributing content is different. See "Contributing Content," above.)
+## Using GitHub to Contribute Code to HelpHub
+If you’re interested in contributing to HelpHub as a developer or designer, you can assign yourself an [issue from the GitHub repo](https://github.com/Kenshino/HelpHub/issues) and contribute code to fix a bug or add a feature.
+
+Note: the process for contributing content is different. See "Contributing Content," above.
+
+1. **Fork the project.** Create a fork of the HelpHub source code from https://github.com/Kenshino/HelpHub. This fork is where you’ll commit any changes that you intend to contribute to the HelpHub project. 
 1. **Create a local environment.** See "Installing and Configuring VVV," above.
 1. **Empty wp-content.** In your development environment, remove all files from wp-content: `cd wp-content && rm -rf *`
 1. **Clone your fork locally.** Within wp-content, clone your fork of the HelpHub repo: `git clone https://github.com/[githubusername]/HelpHub.git`
@@ -68,7 +71,7 @@ If you’re interested in contributing to HelpHub as a developer, you can assign
 1. **Commit your changes.** Commit your revised code to your HelpHub fork.
 1. **Create a pull request.** Request to merge your commits into the HelpHub repo from your fork.
 
-#### Development guidelines
+## Development Guidelines
 To make the site usable, and to keep our codebase manageable, we're committed to these guidelines and standards.
 
 1. **Accessibility**  HelpHub should be usable by all, including users with physical and cognitive disabilities, and those using assistive technologies. Our work must not create any obstacles or limit the access of these users. We embrace tools and processes that facilitate creating an accessible HelpHub, and we value design and testing that maximize accessiblity.
@@ -77,7 +80,7 @@ To make the site usable, and to keep our codebase manageable, we're committed to
 
 1. **Standardized Code** We adhere to the [WordPress Coding Standards](https://codex.wordpress.org/WordPress_Coding_Standards). We aim to create code that is consistent and readable. The HTML, CSS, PHP and Javascript created by the WordPress community should always follow the appropriate coding standard.
  
-# Contributing to the discussion
+# Contributing to the Discussion
 WordPress is a community-driven project, and we encourage you to join the discussion to help innovate and prioritize. There are several ways you can contribute.
 1. **Find bugs and create issues.** Like any website, HelpHub has bugs. You can help by investigating bugs and reporting them as [issues in the GitHub repository](https://github.com/Kenshino/HelpHub/issues).
 1. **Propose design suggestions and improvements.** Submit your ideas as [GitHub issues](https://github.com/Kenshino/HelpHub/issues), and join the docs team discussion to help refine and prioritize pending work.
