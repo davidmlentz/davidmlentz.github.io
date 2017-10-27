@@ -22,7 +22,7 @@ To facilitate the work of many volunteer developers, HelpHub uses [Varying Vagra
 
 ## Installing VVV
 ### Overview
-The objectives of the procedure described here are to 1) create a local WordPress installation where you can do development and design work and 2) contribute that work to the WordPress core project.
+The objectives of the procedure described here are to 1) create a local WordPress installation where you can do development and design work and 2) contribute that work to the HelpHub project.
 
 This process uses [Vagrant](https://www.vagrantup.com/), which allows you to create a sandboxed development environment on your computer. Vagrant provides an environment that isn’t specific to WordPress (or any other application), so you’ll also use [VVV](https://varyingvagrantvagrants.org/) to configure your Vagrant environment specifically for WordPress development.
 ### Installing and Configuring VVV
@@ -63,15 +63,21 @@ If you’re interested in contributing to HelpHub as a developer, you can assign
 1. **Create a local environment.** See "Installing and Configuring VVV," above.
 1. **Empty wp-content.** In your development environment, remove all files from wp-content: `cd wp-content && rm -rf *`
 1. **Clone your fork locally.** Within wp-content, clone your fork of the HelpHub repo: `git clone https://github.com/[githubusername]/HelpHub.git`
+1. **Import the HelpHub data.** HelpHub's source code includes a database export (helphub.wordpress.2017-06-15.xml). Import this data into your local WordPress site to add a snapshot of the content.
 1. **Make your changes in VVV.** Develop and test your feature or bugfix in your VVV clone.
 1. **Commit your changes.** Commit your revised code to your HelpHub fork.
-1. **Create a pull request.** Reqiest to merge your commits into the HelpHub repo from your fork.
+1. **Create a pull request.** Request to merge your commits into the HelpHub repo from your fork.
+
 #### Development guidelines
-1. A11y
-1. Responsive
-1. WordPress coding standards
-#### Database export
+To make the site usable, and to keep our codebase manageable, we're committed to these guidelines and standards.
+
+1. **Accessibility**  HelpHub should be usable by all, including users with physical and cognitive disabilities, and those using assistive technologies. Our work must not create any obstacles or limit the access of these users. We embrace tools and processes that facilitate creating an accessible HelpHub, and we value design and testing that maximize accessiblity.
+
+1. **Responsive Design**  We're committed to designing, building and maintaining a site that is usable on devices of varying sizes and platforms.
+
+1. **Standardized Code** We adhere to the [WordPress Coding Standards](https://codex.wordpress.org/WordPress_Coding_Standards). We aim to create code that is consistent and readable. The HTML, CSS, PHP and Javascript created by the WordPress community should always follow the appropriate coding standard.
  
-# Contributing to the discussion / shape the work
-* Find bugs and create issues. Like any website, HelpHub has bugs. You can help by investigating bugs and reporting them as [issues in the GitHub repository](https://github.com/Kenshino/HelpHub/issues).
-* Propose design suggestions and improvements. Submit your ideas as [GitHub issues](https://github.com/Kenshino/HelpHub/issues), and join the docs team discussion to help refine and prioritize pending work.
+# Contributing to the discussion
+WordPress is a community-driven project, and we encourage you to join the discussion to help innovate and prioritize. There are several ways you can contribute.
+1. **Find bugs and create issues.** Like any website, HelpHub has bugs. You can help by investigating bugs and reporting them as [issues in the GitHub repository](https://github.com/Kenshino/HelpHub/issues).
+1. **Propose design suggestions and improvements.** Submit your ideas as [GitHub issues](https://github.com/Kenshino/HelpHub/issues), and join the docs team discussion to help refine and prioritize pending work.
