@@ -1,7 +1,7 @@
 # davidmlentz.github.io
-This is the portfolio site of David M. Lentz (davidmlentz@gmail.com). The purpose of this portfolio is to compile and display my recent work in the field of technical communication.
+This is the portfolio site of David M. Lentz (davidmlentz@gmail.com). The purpose of this portfolio is to display some of my technical writing.
 
-I recently completed an MA in technical communication. As part of my coursework, I wrote a white paper as a final project:
+I recently completed an MA in technical communication. I wrote a white paper as a final project in that program:
 * [Telemedicine and Business Efficiency: Improving Patient Outcomes](http://davidmlentz.github.io/white_paper.pdf)
 
 I also studied content management and wrote a bit about it:
@@ -10,7 +10,7 @@ I also studied content management and wrote a bit about it:
 I wrote this article helping users configure virtual servers:
 * [How To Set Up the Latest MediaWiki with Lighttpd on Ubuntu 14.04](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/How%20To%20Set%20Up%20the%20Latest%20MediaWiki%20with%20Lighttpd%20on%20Ubuntu%2014.04.md)
 
-I wrote this article as a contribution to freeCodeCamp documentation for Hacktoberfest 2017:
+This article is my contribution to freeCodeCamp documentation for Hacktoberfest 2017:
 * [10 Simple and Useful Linux Commands](https://github.com/davidmlentz/guides/blob/patch-1/src/pages/linux/10-simple-and-useful-linux-commands/index.md)
 
 In my current job, I create documents for the WordPress Support team at Boise State University:
