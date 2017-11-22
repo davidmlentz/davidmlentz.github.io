@@ -10,8 +10,9 @@ I also studied content management and wrote a bit about it:
 I wrote this article helping users configure virtual servers:
 * [How To Set Up the Latest MediaWiki with Lighttpd on Ubuntu 14.04](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/How%20To%20Set%20Up%20the%20Latest%20MediaWiki%20with%20Lighttpd%20on%20Ubuntu%2014.04.md)
 
-This article is my contribution to freeCodeCamp documentation for Hacktoberfest 2017:
+These articles are my contribution to freeCodeCamp documentation for Hacktoberfest 2017:
 * [10 Simple and Useful Linux Commands](https://github.com/davidmlentz/guides/blob/patch-1/src/pages/linux/10-simple-and-useful-linux-commands/index.md)
+* [Linux: writing a bash script](https://github.com/davidmlentz/guide-articles/edit/master/articles/Linux/writing-a-bash-script.md)
 
 In my current job, I create documents for the WordPress Support team at Boise State University:
 * [Switching a WordPress Site From Jetpack-Based Subscriptions to Mailchimp](https://github.com/OITWPsupport/documentation/blob/master/Moving%20Site%20Subscriptions%20to%20Mailchimp.md)
