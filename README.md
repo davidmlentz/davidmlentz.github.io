@@ -12,7 +12,7 @@ I wrote this article helping users configure virtual servers:
 
 These articles are my contribution to freeCodeCamp documentation for Hacktoberfest 2017:
 * [10 Simple and Useful Linux Commands](https://github.com/davidmlentz/guides/blob/patch-1/src/pages/linux/10-simple-and-useful-linux-commands/index.md)
-* [Linux: writing a bash script](https://github.com/davidmlentz/guide-articles/edit/master/articles/Linux/writing-a-bash-script.md)
+* [Linux: Writing a Bash Script](https://github.com/davidmlentz/guide-articles/blob/master/articles/Linux/writing-a-bash-script.md)
 
 In my current job, I create documents for the WordPress Support team at Boise State University:
 * [Switching a WordPress Site From Jetpack-Based Subscriptions to Mailchimp](https://github.com/OITWPsupport/documentation/blob/master/Moving%20Site%20Subscriptions%20to%20Mailchimp.md)
