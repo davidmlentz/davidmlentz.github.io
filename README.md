@@ -10,6 +10,10 @@ I also studied content management and wrote a bit about it:
 I wrote this article helping users configure virtual servers:
 * [How To Set Up the Latest MediaWiki with Lighttpd on Ubuntu 14.04](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/How%20To%20Set%20Up%20the%20Latest%20MediaWiki%20with%20Lighttpd%20on%20Ubuntu%2014.04.md)
 
+The links below demonstrate my substantive editing work on an article for the WordPress documentation team:
+* [Before](https://make.wordpress.org/core/handbook/tutorials/installing-a-local-server/installing-vvv/)
+* [After](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/installing_vvv.md)
+
 These articles are my contribution to freeCodeCamp documentation for Hacktoberfest 2017:
 * [10 Simple and Useful Linux Commands](https://github.com/davidmlentz/guides/blob/patch-1/src/pages/linux/10-simple-and-useful-linux-commands/index.md)
 * [Linux: Writing a Bash Script](https://github.com/davidmlentz/guide-articles/blob/master/articles/Linux/writing-a-bash-script.md)
