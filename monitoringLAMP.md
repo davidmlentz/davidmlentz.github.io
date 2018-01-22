@@ -40,12 +40,14 @@ See https://app.datadoghq.com/infrastructure
 
 ## Apache
 ### on the server side...
+Monitoring Apache happens through the Agent. You need to install the Integration.
 
 In the last step, you installed the Datadog agent on your LAMP server. Next you'll configure the agent to enable Apache integration:
 
 `cp /etc/dd-agent/conf.d/apache.yaml.example /etc/dd-agent/conf.d/apache.yaml`
 
-Next, restart the agent so your changes take effect.
+Next, restart the agent so your changes take effect:
+`sudo /etc/init.d/datadog-agent restart`
 
 You can generate some metrics (page hits) with this command. (This will request a non-existent page on your server, and the resulting errors will be visible in your Datadog dashboard).
 
@@ -60,14 +62,34 @@ See (https://app.datadoghq.com/account/settings#integrations/apache)[https://app
 
 ## MySQL
 ### on the server side...
+Monitoring MySQL happens through the Agent. You need to install the Integration.
+
 Get MySQL monitoring going:
-`CREATE USER 'datadog'@'localhost' IDENTIFIED BY '<UNIQUEPASSWORD>’;`
+`CREATE USER 'datadog'@'localhost' IDENTIFIED BY 'mypassword';`
+
+`cp /etc/dd-agent/conf.d/mysql.yaml.example /etc/dd-agent/conf.d/mysql.yaml`
+
+Next, restart the agent so your changes take effect:
+`sudo /etc/init.d/datadog-agent restart`
+
+You can generate some metrics with this command:
+`for i in {1..50}; do mysql -u datadog --password=mypassword -e "select now();"; done`
 
 ### on the Datadog side...
+
+Go to your Metrics Explorer (https://app.datadoghq.com/metric/explorer) page and type `mysql.performance.queries` into the Graph field. [TODO: screenshot]
 
 
 ## PHP
 ### on the server side...
+Monitoring PHP requires a library. You need to install the Integration.
+
+Things you can do with the PHP library out of the box:
+1. increment
+1. decrement
+1. timing
+1. events
+
 Modify the agent to get PHP monitoring going
 (“Configure the agent to enable the PHP integration” ?)
 https://docs.datadoghq.com/integrations/php/
@@ -85,19 +107,19 @@ PHP sample code:
   use DataDog\DogStatsd;
   $statsd = new DogStatsd();
 
-  function queryTime() {
-    // Simulate time required for a db query:
+  function functionTime() {
+    // Simulate time required to run a function:
     usleep(rand(0,100000));
   }
 
-  function pageHits() {
+  function functionCalls() {
     global $statsd;
-    $statsd->increment('query.count');
+    $statsd->increment('functionCalls.count');
   }
 
   $start_time = microtime(true);
   queryTime();
-  $statsd->timing('queryTime.duration', microtime(true) - $start_time);
+  $statsd->timing('functionTime.duration', microtime(true) - $start_time);
 
   pageHits();
   
