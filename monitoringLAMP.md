@@ -48,7 +48,10 @@ In the last step, you installed the Datadog agent on your LAMP server. Next you'
 Next, restart the agent so your changes take effect.
 
 You can generate some metrics (page hits) with this command. (This will request a non-existent page on your server, and the resulting errors will be visible in your Datadog dashboard).
+
 `for i in {1..50}; do wget http://localhost/404.html; done && rm 404.html*`
+
+
 
 ### on the Datadog side...
 
