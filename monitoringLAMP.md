@@ -128,3 +128,5 @@ PHP sample code:
 ```
 
 ### on the Datadog side...
+
+Go to your Metrics Explorer (https://app.datadoghq.com/metric/explorer) page and type `function` into the Graph field. Select both `functionCalls.count` and `functionTime.duration`.
