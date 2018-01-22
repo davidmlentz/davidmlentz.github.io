@@ -3,9 +3,13 @@
 ## Overview
 
 This article will…
+
 The LAMP stack is…
+
 Monitoring the LAMP stack is important because…
+
 The things you’ll need to do are…
+
 What metrics are important? What are the key performance metrics we’ll look at? Are there types or categories of metrics?
 
 ## Prerequisites
