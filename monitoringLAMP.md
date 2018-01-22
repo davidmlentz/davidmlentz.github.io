@@ -96,7 +96,9 @@ https://docs.datadoghq.com/integrations/php/
 
 PHP server commands:
 `cd /var/www/html`
-`composer require datadog/php-datadogstatsd``
+
+`composer require datadog/php-datadogstatsd`
+
 `vi index.php`
 
 PHP sample code:
