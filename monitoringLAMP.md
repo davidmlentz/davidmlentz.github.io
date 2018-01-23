@@ -35,8 +35,9 @@ See also https://app.datadoghq.com/account/settings#agent/ubuntu
 
 ### on the Datadog side...
 
-See https://app.datadoghq.com/infrastructure 
-Install integrations for Apache, PHP, and MySQL.
+See https://app.datadoghq.com/infrastructure and elsewhere to view some initial Datadog measurements of your server.
+
+Then, while we're here, install integrations for [Apache](https://app.datadoghq.com/account/settings#integrations/apache), [MySQL](https://app.datadoghq.com/account/settings#integrations/mysql), and [PHP](https://app.datadoghq.com/account/settings#integrations/php).
 
 
 Install the Apache integration: (https://app.datadoghq.com/account/settings#integrations/apache)[https://app.datadoghq.com/account/settings#integrations/apache] etc
