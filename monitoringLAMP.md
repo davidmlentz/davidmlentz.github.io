@@ -59,6 +59,7 @@ You can generate some metrics (page hits) with this command. (This will request 
 
 See (https://app.datadoghq.com/account/settings#integrations/apache)[https://app.datadoghq.com/account/settings#integrations/apache]
 
+Go to your Metrics Explorer (https://app.datadoghq.com/metric/explorer) page and type `apache.net.hits` into the Graph field. [TODO: screenshot]
 
 ## MySQL
 ### on the server side...
