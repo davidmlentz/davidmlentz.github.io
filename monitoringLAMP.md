@@ -36,6 +36,10 @@ See also https://app.datadoghq.com/account/settings#agent/ubuntu
 ### on the Datadog side...
 
 See https://app.datadoghq.com/infrastructure 
+Install integrations for Apache, PHP, and MySQL.
+
+
+Install the Apache integration: (https://app.datadoghq.com/account/settings#integrations/apache)[https://app.datadoghq.com/account/settings#integrations/apache] etc
 
 
 ## Apache
@@ -150,3 +154,12 @@ You can generate some metrics with this command:
 Go to your Metrics Explorer (https://app.datadoghq.com/metric/explorer) page and type `function` into the Graph field. Select both `functionCalls.count` and `functionTime.duration.median`.
 
 ## Creating a Custom Dashboard in Datadog
+Dashboards -> New Dashboard
+Dashboard Name
+New Screenboard
+Graph, drag into place
+1 - select your visualization. Choose "Timeseries"
+2 - Click the box next to Get and type/select the following: functionCalls.count, functionTime.duration.median, mysql.performance.queries, system.cpu.user, 
+(click "Add Metric +" after each of these)
+
+TODO: screenshot here
