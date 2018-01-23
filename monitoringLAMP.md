@@ -55,7 +55,7 @@ Next, restart the agent so your changes take effect:
 
 You can generate some metrics (page hits) with this command. (This will request a non-existent page on your server, and the resulting errors will be visible in your Datadog dashboard).
 
-`for i in {1..50}; do wget http://localhost/404.html; done && rm 404.html*`
+`for i in {1..99}; do wget http://localhost/404.html; done && rm 404.html*`
 
 
 
@@ -90,7 +90,7 @@ Next, restart the agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
 
 You can generate some metrics with this command:
-`for i in {1..50}; do mysql -u datadog --password=mypassword -e "select now();"; done`
+`for i in {1..99}; do mysql -u datadog --password=mypassword -e "select now();"; done`
 
 ### on the Datadog side...
 
@@ -147,7 +147,7 @@ PHP sample code:
 ```
 
 You can generate some metrics with this command:
-`for i in {1..50}; do wget http://localhost/index.php; done && rm index.php.*`
+`for i in {1..99}; do wget http://localhost/index.php; done && rm index.php.*`
 
 ### on the Datadog side...
 
