@@ -6,11 +6,15 @@
 
 ## Installing Datadog Integrations
 
+(screenshot)
+
 # The Datadog Agent
 
 ## Installing the Agent
 
 ### Copy Agent Install String
+
+(screenshot)
 
 ### Execute Agent Install String
 
