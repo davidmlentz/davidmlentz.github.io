@@ -17,13 +17,13 @@ What metrics are important? What are the key performance metrics we’ll look at
 This assumes you have an ubuntu server configured as a LAMP stack. If you need to install the necessary 
 packages, use:
 
-`apt-get update`
+`sudo apt-get update`
 
-`apt-get install -y apache2 mysql-server php libapache2-mod-php`
+`sudo apt-get install -y apache2 mysql-server php libapache2-mod-php`
 
 We'll need Composer for configuring PHP in the steps below, so install that, too. (Composer itself requires Curl, so...)
 
-`apt-get install -y composer php-curl`
+`sudo apt-get install -y composer php-curl`
 
 ## Linux
 ### on the server side...
