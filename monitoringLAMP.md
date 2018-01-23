@@ -67,7 +67,19 @@ Monitoring MySQL happens through the Agent. You need to install the Integration.
 Get MySQL monitoring going:
 `CREATE USER 'datadog'@'localhost' IDENTIFIED BY 'mypassword';`
 
+`GRANT REPLICATION CLIENT ON *.* TO 'datadog'@'localhost' WITH MAX_USER_CONNECTIONS 5;`
+
+`GRANT PROCESS ON *.* TO 'datadog'@'localhost';`
+
+`GRANT SELECT ON performance_schema.* TO 'datadog'@'localhost';`
+
+`FLUSH PRIVILEGES;`
+
 `cp /etc/dd-agent/conf.d/mysql.yaml.example /etc/dd-agent/conf.d/mysql.yaml`
+
+`vi /etc/dd-agent/conf.d/mysql.yaml`
+
+...and edit the connection info in the mysql.yaml file (user, pass).
 
 Next, restart the agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
@@ -120,15 +132,18 @@ PHP sample code:
   }
 
   $start_time = microtime(true);
-  queryTime();
+  functionTime();
   $statsd->timing('functionTime.duration', microtime(true) - $start_time);
 
-  pageHits();
+  functionCalls();
   
   echo "Hello world";
 ?>
 ```
 
+You can generate some metrics with this command:
+`for i in {1..50}; do wget http://localhost/index.php; done && rm index.php.*`
+
 ### on the Datadog side...
 
-Go to your Metrics Explorer (https://app.datadoghq.com/metric/explorer) page and type `function` into the Graph field. Select both `functionCalls.count` and `functionTime.duration`.
+Go to your Metrics Explorer (https://app.datadoghq.com/metric/explorer) page and type `function` into the Graph field. Select both `functionCalls.count` and `functionTime.duration.median`.
