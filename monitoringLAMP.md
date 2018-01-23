@@ -57,7 +57,7 @@ You can generate some metrics (page hits) with this command. (This will request 
 
 ### on the Datadog side...
 
-See (https://app.datadoghq.com/account/settings#integrations/apache)[https://app.datadoghq.com/account/settings#integrations/apache]
+Install the Apache integration: (https://app.datadoghq.com/account/settings#integrations/apache)[https://app.datadoghq.com/account/settings#integrations/apache]
 
 Go to your Metrics Explorer (https://app.datadoghq.com/metric/explorer) page and type `apache.net.hits` into the Graph field. [TODO: screenshot]
 
@@ -148,3 +148,5 @@ You can generate some metrics with this command:
 ### on the Datadog side...
 
 Go to your Metrics Explorer (https://app.datadoghq.com/metric/explorer) page and type `function` into the Graph field. Select both `functionCalls.count` and `functionTime.duration.median`.
+
+## Creating a Custom Dashboard in Datadog
