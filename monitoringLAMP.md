@@ -44,7 +44,7 @@ Monitoring Apache happens through the Agent. You need to install the Integration
 
 In the last step, you installed the Datadog agent on your LAMP server. Next you'll configure the agent to enable Apache integration:
 
-`cp /etc/dd-agent/conf.d/apache.yaml.example /etc/dd-agent/conf.d/apache.yaml`
+`sudo cp /etc/dd-agent/conf.d/apache.yaml.example /etc/dd-agent/conf.d/apache.yaml`
 
 Next, restart the agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
@@ -76,9 +76,9 @@ Get MySQL monitoring going:
 
 `FLUSH PRIVILEGES;`
 
-`cp /etc/dd-agent/conf.d/mysql.yaml.example /etc/dd-agent/conf.d/mysql.yaml`
+`sudo cp /etc/dd-agent/conf.d/mysql.yaml.example /etc/dd-agent/conf.d/mysql.yaml`
 
-`vi /etc/dd-agent/conf.d/mysql.yaml`
+`sudo vi /etc/dd-agent/conf.d/mysql.yaml`
 
 ...and edit the connection info in the mysql.yaml file (user, pass).
 
