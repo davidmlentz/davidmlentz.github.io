@@ -52,21 +52,21 @@ Copy this to your clipboard.
 
 At your Ubuntu command line, paste your customized agent installation string and hit enter. The agent will install itself and begin sending metrics to Datadog. The process will end with a pause while the agent confirms that initial metrics are being collected and sent successfully.
 
-![Waiting for metrics]( "Waiting for metrics")
+![Waiting for metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/waiting%20for%20metrics.png "Waiting for metrics")
+
+Once installation is verified, you'll see a message confirming that the agent is running and contining to collect metrics from your Linux server.
+
+![Your agent is running and functioning properly](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/your%20agent%20is%20running.png "Your agent is running and functioning properly")
 
 ### View Host Metrics on Datadog
 
-You'll notice the end of the installation process includes "Sending metrics..." (TODO)
-
-(screenshot)
-
 The Datadog agent has gone to work already sending data about your server into your Datadog account. Let's take a look:
 
-The [infrastructure list](https://app.datadoghq.com/infrastructure) (TODO: host list?) in your Datadog account shows a list of your hosts that are being actively monitored by your Datadog account. Click the name of your first host to see the metrics the agent is now reporting.
+The [host list](https://app.datadoghq.com/infrastructure) in your Datadog account shows a list of your hosts that are being actively monitored by your Datadog account. Click the name of your first host to see the metrics the agent is now reporting.
 
 ![Host metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Host%20Metrics.png "Host metrics")
 
-There's not much here yet. Next we'll begin gathering metrics on the performance of your Apache server.
+There's not much to show here yet, but this default dashboard displays the top-level metrics for each host running the Datadog agent. Next we'll begin gathering metrics on the performance of your Apache server.
 
 ## Apache
  
