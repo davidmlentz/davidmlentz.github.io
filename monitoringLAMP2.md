@@ -54,7 +54,7 @@ Within your Datadog account, you can find an Agent installation command that's c
 
 Navigate to the [Agent Installation page](https://app.datadoghq.com/account/settings#agent/ubuntu) to see your unique agent installation string. (Notice the different platforms listed on the left side of the page. As you add infrastructure of various types, this page will create the appropriate installation command for each of them.)
 
-![One-step agent installation](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install.png "One-step agent installation")
+![One-step agent installation](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install_b.png "One-step agent installation")
 
 Copy the Agent installation command (the string starting with "DD_API_KEY=") to your clipboard.
 
@@ -64,6 +64,12 @@ At your Ubuntu command line, paste the Agent installation command and hit enter.
 
 ![Waiting for metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/waiting%20for%20metrics.png "Waiting for metrics")
 
+![Waiting for metrics_a](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Waiting%20for%20metrics_a.png "Waiting for metrics_a")
+
+![Waiting for metrics_b](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Waiting%20for%20metrics_b.png "Waiting for metrics_b")
+
+![Waiting for metrics_c](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Waiting%20for%20metrics_c.png "Waiting for metrics_c")
+
 Once installation is verified, you'll see a message confirming that the agent is running and functioning properly.
 
 ### View Host Metrics on Datadog
@@ -71,6 +77,8 @@ Once installation is verified, you'll see a message confirming that the agent is
 The Datadog agent has gone to work already sending data about your server into your Datadog account. Let's take a look:
 
 The [infrastructure list](https://app.datadoghq.com/infrastructure) in your Datadog account shows a list of your hosts that are being actively monitored by your Datadog account. Click the name of your first host to see the initial metrics.
+
+![Infrastructure list](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Infrastructure%20list.png "Infrastructure list")
 
 ![Host metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Host%20Metrics.png "Host metrics")
 
@@ -98,7 +106,7 @@ You can generate some Apache metrics with the following command. This will reque
 
 To see the Apache data the Agent is sending to your account, navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
 
-![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard.png "Default Apache Dashboard")
+![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard_2.png "Default Apache Dashboard")
 
 
 ## MySQL
@@ -143,7 +151,7 @@ You can generate some MySQL metrics with this command:
 
 To see how Datadog displays the metrics you just generated, navigate to the [default MySQL dashboard](https://app.datadoghq.com/dash/integration/12/).
 
-(screenshot: Default MySQL Dashboard)
+![Default MySQL Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20mysql%20dashboard_2.png "Default MySQL Dashboard")
 
 ## PHP 
 
@@ -203,7 +211,7 @@ Generate some metrics by simulating web traffic with this command:
 
 To view the PHP application data you've generated, navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `functionTime.duration.avg` in the Graph field.
 
-![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg.png "Metric Explorer for PHP")
+![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg_2.png "Metric Explorer for PHP")
 
 # Viewing Data: Creating a Custom Dashboard in Datadog
 
@@ -220,7 +228,7 @@ Follow these steps to add graphs to your timeboard to display information about 
 1. Repeat these steps, but use functionCalls.count as the "Get" value
 1. Repeat these steps, but use functionTime.duration.avg as the "Get" value
 
-![Custom Datadog Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/My%20Dashboard.png "Custom Datadog Dashboard")
+![Custom Datadog Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/My%20Dashboard_2.png "Custom Datadog Dashboard")
 
 # Conclusion
-(screenshot)
+
