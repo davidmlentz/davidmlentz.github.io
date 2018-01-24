@@ -8,13 +8,13 @@ Web applications of any size have some common requirements: a web server, and us
 
 ### Why is monitoring the LAMP stack important?
 
-Because your LAMP stack is the foundation of your application, your users' experience--and your business--rests on the performance of these servers. Datadog provides a platform for aggregating and displaying data that represent your infrastructure's performance. By bringing your LAMP stack's performance data into Datadog, you can visualize and communicate information that represents steady state performance, outages and incidents, scalability needs, and potential problems. That information should form the basis for your decisions as you maintain that app, and help you decide what changes to make in your application development and technology architecture.
+Your users' experience depends on the performance of your infrastructure. By bringing your LAMP stack's performance data into Datadog, you can visualize and communicate information that represents steady state performance, outages and incidents, scalability needs, and potential problems. That information should form the basis for your decisions as you maintain your application, determining future application development and technology architecture.
 
 ### What you'll learn in this post
 
 Collecting and displaying valuable, actionable data starts with a few small steps. This article will guide you through installing and configuring the Datadog Agent, and instrumenting some basic code to gather the type of data that can help you understand your application's performance.
 
-Once the Agent is running and the host is configured, you'll see how to look at the data displayed in your Datadog account. You'll see some default dashboards first, then finish by creating a basic customized dashboard combining the metrics from the various components of your LAMP stack.
+Once the Agent is running and the host is configured, you'll see how to look at the data displayed in your Datadog account. You'll see some default dashboards first, then finish by creating a basic customized that combines metrics from the various components of your LAMP stack.
 
 ## Prerequisites
 
@@ -24,8 +24,7 @@ To perform the steps in this guide, you'll need a Datadog account. Visit [https:
 ### Datadog integrations
 Within your Datadog account settings, you'll need to install integrations for the components of the LAMP stack to be monitored. 
 
-Note: as you install each of the integrations listed below, you'll see language on the Datadog site on how to configure 
-and validate each installation. We'll go through those steps in detail below, so for each of these integrations, you can scroll to the bottom of the configuration tab and click "Install Integration."
+Note: as you install each of the integrations listed below, you'll see instructions on configuring and validating each installation. We'll go through those steps in detail below, so at this stage you can scroll to the bottom of the Configuration tab and click "Install Integration."
 
 1. Apache integration (https://app.datadoghq.com/account/settings#integrations/apache)
 1. MySQL integration (https://app.datadoghq.com/account/settings#integrations/mysql)
@@ -33,7 +32,7 @@ and validate each installation. We'll go through those steps in detail below, so
 
 ### LAMP server
 
-This assumes you have an Ubuntu server configured as a LAMP stack. (The commands below were executed on a virtual server running Ubuntu 16.04. These commands and sample code should work correctly on any similar Debian-based server. If you're using an RPM-based server, you'll need to make the necessary substitutions for the `apt-get` steps.) 
+This guide assumes you have an Ubuntu server configured as a LAMP stack. (The commands below were executed on a virtual server running Ubuntu 16.04. These commands and sample code should work correctly on any similar Debian-based server. If you're using an RPM-based server, you'll need to make the necessary substitutions for the `apt-get` steps.) 
 
 If your Unbuntu server isn't already running Apache, MySQL, and PHP, follow these steps:
 
@@ -43,18 +42,18 @@ Ensure that your package lists are up to date:
 Install Apache, MySQL and PHP:
 `sudo apt-get install -y apache2 mysql-server php libapache2-mod-php`
 
-Install Composer. You'll need this for configuring PHP. Composer itself requires Curl, so install both of them:
+Install Composer, which you'll need for configuring PHP to work with Datadog. Composer itself requires Curl, so install them both:
 `sudo apt-get install -y composer php-curl`
 
-## Installing the Agent on a Linux host
+## Installing the Datadog Agent on a Linux host
 
-The Datadog Agent runs on your host and is responsible for collecting metrics and sending data to Datadog so you can view it in your account.
+The Agent runs on your host and is responsible for collecting metrics and sending data to Datadog so you can view it in your account.
 
 ### Copy the Agent installation string
 
-Within your Datadog account, you can find an Agent installation command that's customized for your use. This includes your API key, which is necessary to authorize the agent to send your data to your Datadog account.
+Within your Datadog account, you can find an Agent installation command that's customized for your use. This includes your API key, which is necessary to authorize the Agent to send metrics to Datadog.
 
-Navigate to the [Agent Installation page](https://app.datadoghq.com/account/settings#agent/ubuntu) to see your unique agent installation string. (Notice the different platforms listed on the left side of the page. As you add infrastructure of various types, this page will create the appropriate installation command for each of them.)
+Navigate to the [Agent installation instructions](https://app.datadoghq.com/account/settings#agent/ubuntu) to see your unique Agent installation string. (Notice the different platforms listed on the left side of the page. As you add infrastructure of various types, this page will create the appropriate Agent installation command for each of them.)
 
 ![One-step agent installation](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install_b.png "One-step agent installation")
 
@@ -66,25 +65,23 @@ At your Ubuntu command line, paste the Agent installation command and hit enter.
 
 ![Waiting for metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Waiting%20for%20metrics_c.png "Waiting for metrics")
 
-Once installation is verified, you'll see a message confirming that the agent is running and functioning properly.
+Once installation is verified, you'll see a message confirming that the agent is functioning properly.
 
 #### View host metrics on Datadog
 
-The Datadog agent has gone to work already sending data about your server into your Datadog account. Let's take a look:
+The Datadog Agent has gone to work already sending data about your server into your Datadog account. Let's take a look:
 
 The [infrastructure list](https://app.datadoghq.com/infrastructure) in your Datadog account shows a list of your hosts that are being actively monitored by your Datadog account. Click the name of your first host to see the initial metrics.
 
 ![Host metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Host%20Metrics.png "Host metrics")
 
-There's not much to see here yet, but this default dashboard displays the top-level metrics for each host running the Datadog agent. The following steps will guide you to start gathering metrics on the performance of your Apache server.
+There's not much to see here yet, but this default dashboard displays the top-level metrics for each host running the Datadog agent. Next, you'll start gathering metrics on the performance of your Apache server.
 
 ### Getting started monitoring Apache
  
 #### Configure the Agent
 
-The Datadog agent is now running on the LAMP host and collecting top-level metrics. Next you'll configure the Agent to enable Apache integration so you can see data about your web server's performance:
-
-The Agent installation script placed some example configuration files on your server. Copy the Apache example into place for the Agent to use:
+The Agent installation script placed some example configuration files on your server. To begin collecting Apache metrics, copy the Apache example configuration file into place for the Agent to use:
 `sudo cp /etc/dd-agent/conf.d/apache.yaml.example /etc/dd-agent/conf.d/apache.yaml`
 
 Next, restart the Agent so your changes take effect:
@@ -102,6 +99,7 @@ To see the Apache data the Agent is sending to your account, navigate to Datadog
 
 ![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard_2.png "Default Apache Dashboard")
 
+The "Rate of requests" and "Bytes served" graphs should show some data corresponding to the `wget` command you executed above.
 
 ### Getting started monitoring MySQL
 
@@ -121,7 +119,7 @@ First, connect my MySQL as the root user and execute these queries:
 
 `FLUSH PRIVILEGES;`
 
-Next, copy the Agent's MySQL configuration file into place:
+Next, copy the MySQL example configuration file into place for the Agent to use:
 
 `sudo cp /etc/dd-agent/conf.d/mysql.yaml.example /etc/dd-agent/conf.d/mysql.yaml`
 
@@ -129,7 +127,7 @@ Then edit the file to update connection information so the Agent can connect to 
 
 `sudo vi /etc/dd-agent/conf.d/mysql.yaml`
 
-Update the Database section of this file to reflect the user and password from the SQL statements above.
+Update the `user` and `pass` values in this file to reflect the user and password from the SQL statements above.
 
 ![MySQL configuration](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/MySQL%20config_1.png "MySQL configuration")
 
@@ -151,7 +149,7 @@ To see how Datadog displays the metrics you just generated, navigate to the [def
 
 ### Getting started monitoring PHP 
 
-Using the Datadog PHP library, you measure the performance of your application, for example by timing function calls and counting page loads. You can measure the performance indicators most valuable to you, depending on your application, by strategically adding a small amount of code to your PHP files.
+Using the Datadog PHP library, you can measure the performance of your application, for example by timing function calls and counting page loads. You can measure the performance indicators most valuable to you, depending on your application, by strategically adding a small amount of code to your PHP files.
 
 #### Configure the Agent
 
