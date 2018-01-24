@@ -96,7 +96,11 @@ The Datadog agent is now collecting data about your web server's performance and
 
 ### Configure the Agent
 
-`CREATE USER 'datadog'@'localhost' IDENTIFIED BY 'mypassword';`
+To get information about your LAMP stack's database server performance, configure the agent to enable MySQL integration.
+
+First, connect my MySQL as the root user and execute these queries:
+
+`CREATE USER 'datadog'@'localhost' IDENTIFIED BY '<mypassword>';`
 
 `GRANT REPLICATION CLIENT ON *.* TO 'datadog'@'localhost' WITH MAX_USER_CONNECTIONS 5;`
 
@@ -106,25 +110,29 @@ The Datadog agent is now collecting data about your web server's performance and
 
 `FLUSH PRIVILEGES;`
 
+Next, copy the agent's MySQL configuration file into place:
+
 `sudo cp /etc/dd-agent/conf.d/mysql.yaml.example /etc/dd-agent/conf.d/mysql.yaml`
+
+Then edit the file to update connection information so the agent can connect to the database:
 
 `sudo vi /etc/dd-agent/conf.d/mysql.yaml`
 
-...and edit the connection info in the mysql.yaml file (user, pass).
+In the database section of the file, set user to `datadog` and password to `<mypassword>`.
 
 Next, restart the agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
 
+The Datadog agent is now collecting data about your MySQL server's performance and sending it to your Datadog account.
+
 ### Generate Sample Data
 
-You can generate some metrics with this command:
+You can generate some MySQL metrics with this command:
 `for i in {1..99}; do mysql -u datadog --password=mypassword -e "select now();"; done`
 
 ### View MySQL Metrics on Datadog
 
-### View Apache Metrics on Datadog 
-
-The Datadog agent is now collecting data about your MySQL server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `mysql.performance.queries` in the Graph field.
+Let's look at how Datadog displays the metrics you just generated. Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `mysql.performance.queries` in the Graph field.
 
 ![Metric Explorer for MySQL](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20mysql.performance.queries.png "Metric Explorer for MySQL")
 
@@ -132,18 +140,16 @@ The Datadog agent is now collecting data about your MySQL server's performance a
 
 ### Configure the Agent
 
-Modify the agent to get PHP monitoring going (“Configure the agent to enable the PHP integration”)
-
- - install composer and php-curl
- - create index.php
- - generate php data
-
+Modify the agent to get PHP monitoring going ("Configure the agent to enable the PHP integration").
 
 We'll build a simple web app in your server's document root. Move into your web app's document root:
 `cd /var/www/html`
 
 Configure the web app to use the Datadog PHP integration:
 `composer require datadog/php-datadogstatsd`
+
+If you receive an error on this step, it could be that composer hasn't been installed. Execute this command to install Composer on an Ubuntu host:
+`sudo apt-get install -y composer php-curl`
 
 Create a PHP file by pasting the sample code, below:
 `vi index.php`
@@ -175,6 +181,7 @@ PHP sample code:
   echo "Hello world";
 ?>
 ```
+The Datadog agent is now ready to collect and report data about your simple PHP application.
 
 ### Generate Sample Data
 
@@ -183,7 +190,7 @@ You can generate some metrics with this command:
 
 ### View PHP Metrics on Datadog
 
-The Datadog agent is now collecting data about your MySQL server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `functionTime.duration.avg` in the Graph field.
+To view the PHP appliation data you've generated, navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `functionTime.duration.avg` in the Graph field.
 
 ![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg.png "Metric Explorer for PHP")
 
