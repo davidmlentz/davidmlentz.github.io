@@ -46,11 +46,11 @@ Install Apache, MySQL and PHP:
 Install Composer. You'll need this for configuring PHP. Composer itself requires Curl, so install both of them:
 `sudo apt-get install -y composer php-curl`
 
-## Installing the Agent on Your Linux Host
+## Installing the Agent on a Linux host
 
 The Datadog Agent runs on your host and is responsible for collecting metrics and sending data to Datadog so you can view it in your account.
 
-### Copy the Agent Installation String
+### Copy the Agent installation string
 
 Within your Datadog account, you can find an Agent installation command that's customized for your use. This includes your API key, which is necessary to authorize the agent to send your data to your Datadog account.
 
@@ -60,7 +60,7 @@ Navigate to the [Agent Installation page](https://app.datadoghq.com/account/sett
 
 Copy the Agent installation command (the string starting with "DD_API_KEY=") to your clipboard.
 
-### Execute Agent Install String
+### Execute the Agent installation string
 
 At your Ubuntu command line, paste the Agent installation command and hit enter. The Agent will install and begin sending metrics to Datadog. The process will end with a pause while the agent confirms that initial metrics are being collected and sent successfully.
 
@@ -68,7 +68,7 @@ At your Ubuntu command line, paste the Agent installation command and hit enter.
 
 Once installation is verified, you'll see a message confirming that the agent is running and functioning properly.
 
-#### View Host Metrics on Datadog
+#### View host metrics on Datadog
 
 The Datadog agent has gone to work already sending data about your server into your Datadog account. Let's take a look:
 
@@ -78,7 +78,7 @@ The [infrastructure list](https://app.datadoghq.com/infrastructure) in your Data
 
 There's not much to see here yet, but this default dashboard displays the top-level metrics for each host running the Datadog agent. The following steps will guide you to start gathering metrics on the performance of your Apache server.
 
-### Apache
+### Getting started monitoring Apache
  
 #### Configure the Agent
 
@@ -90,20 +90,20 @@ The Agent installation script placed some example configuration files on your se
 Next, restart the Agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
 
-#### Generate Sample Data
+#### Generate sample data
 
 You can generate some Apache metrics with the following command. This will request a non-existent page on your server, but the requests will be visible in your Datadog dashboard.
 
 `for i in {1..99}; do wget http://localhost/404.html; done && rm 404.html*`
 
-#### View Apache Metrics on Datadog 
+#### View Apache metrics in Datadog 
 
 To see the Apache data the Agent is sending to your account, navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
 
 ![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard_2.png "Default Apache Dashboard")
 
 
-### MySQL
+### Getting started monitoring MySQL
 
 #### Configure the Agent
 
@@ -138,18 +138,18 @@ Next, restart the agent so your changes take effect:
 
 The Datadog Agent is now collecting data about your MySQL server's performance and sending it to your Datadog account.
 
-#### Generate Sample Data
+#### Generate sample data
 
 You can generate some MySQL metrics with this command:
 `for i in {1..99}; do mysql -u datadog --password=<mypassword> -e "select now();"; done`
 
-#### View MySQL Metrics on Datadog
+#### View MySQL metrics in Datadog
 
 To see how Datadog displays the metrics you just generated, navigate to the [default MySQL dashboard](https://app.datadoghq.com/dash/integration/12/).
 
 ![Default MySQL Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20mysql%20dashboard_2.png "Default MySQL Dashboard")
 
-### PHP 
+### Getting started monitoring PHP 
 
 Using the Datadog PHP library, you measure the performance of your application, for example by timing function calls and counting page loads. You can measure the performance indicators most valuable to you, depending on your application, by strategically adding a small amount of code to your PHP files.
 
@@ -198,18 +198,18 @@ PHP sample code:
 ```
 The Datadog agent is now ready to collect and report data about your PHP application.
 
-#### Generate Sample Data
+#### Generate sample data
 
 Generate some metrics by simulating web traffic with this command:
 `for i in {1..99}; do wget http://localhost/index.php; done && rm index.php.*`
 
-#### View PHP Metrics on Datadog
+#### View PHP metrics in Datadog
 
 To view the PHP application data you've generated, navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `functionTime.duration.avg` in the Graph field.
 
 ![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg_2.png "Metric Explorer for PHP")
 
-## Viewing Data: Creating a Custom Dashboard in Datadog
+## Creating a custom dashboard in Datadog
 
 The steps above have used Datadog's Metric Explorer and default dashboards to see some initial metrics. Intead of looking at each of these separately, you can create a custom dashboard, combining relevant metrics to help visualize the performance the infrastructure and the application.
 
@@ -228,3 +228,4 @@ Follow these steps to add graphs to your timeboard to display information about 
 
 ## Conclusion
 
+In this short tutorial, you've installed the Datadog Agent on your LAMP host, installed Datadog integrations for the LAMP stack, and created a custom dashboard to view application metrics.
