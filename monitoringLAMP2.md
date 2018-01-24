@@ -92,6 +92,15 @@ The Datadog agent is now collecting data about your web server's performance and
 
 (screenshot)
 
+(TODO: In think this approach requires that the Apache Integration be installed at datadoghq.com. See below for an alternative approach.)
+
+### View Apache Metrics on Datadog 
+
+The Datadog agent is now collecting data about your web server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `mysql.performance.queries` in the Graph field.
+
+![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg.png "Metric Explorer for PHP")
+
+
 ## MySQL
 
 ### Configure the Agent
