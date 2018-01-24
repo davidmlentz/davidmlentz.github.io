@@ -149,11 +149,11 @@ To see how Datadog displays the metrics you just generated, navigate to the [def
 
 ## PHP 
 
-Using the Datadog PHP library, you can add code to your application to measure key performance indicators. Examples of useful PHP metrics include counting page loads and timing function calls. You can measure what's important to you, depending on your application, by strategically adding a small amount of code to your PHP files.
+Using the Datadog PHP library, you measure the performance of your application, for example by timing function calls and counting page loads. You can measure the performance indicators most valuable to you, depending on your application, by strategically adding a small amount of code to your PHP files.
 
 ### Configure the Agent
 
-To start measure PHP metrics, create a simple PHP app and require the Datadog PHP library.
+To start measuring PHP metrics, create a simple PHP app and require the Datadog PHP library.
 
 Move into your LAMP server's web document root:
 `cd /var/www/html`
@@ -161,7 +161,7 @@ Move into your LAMP server's web document root:
 Configure the web app to use the Datadog PHP integration:
 `composer require datadog/php-datadogstatsd`
 
-If you receive an error on this step, Composer may not be installed on your server. Execute this command to install Composer on an Ubuntu host:
+Note: if you receive an error on this step, Composer may not be installed on your server. Execute this command to install Composer on an Ubuntu host:
 `sudo apt-get install -y composer php-curl`
 
 Create a PHP file by pasting the sample code, below:
@@ -194,7 +194,7 @@ PHP sample code:
   echo "Hello world";
 ?>
 ```
-The Datadog agent is now ready to collect and report data about your simple PHP application.
+The Datadog agent is now ready to collect and report data about your PHP application.
 
 ### Generate Sample Data
 
