@@ -227,3 +227,5 @@ Follow these steps to add graphs to your timeboard to display information about 
 ## Conclusion
 
 In this short tutorial, you've installed the Datadog Agent on your LAMP host, installed Datadog integrations for the LAMP stack, and created a custom dashboard to view application metrics.
+
+(TODO: "Call-to-action with signup link for Datadog trial")
