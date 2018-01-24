@@ -72,7 +72,7 @@ There's not much to show here yet, but this default dashboard displays the top-l
  
 ### Configure the Agent
 
-In the last step, you installed the Datadog agent on your LAMP server and began automatically collecting top-level metrics about your Linxu host. Next you'll configure the agent to enable Apache integration so we can see data about your web server's performance:
+In the last step, you installed the Datadog agent on your LAMP server and began automatically collecting top-level metrics about your Linux host. Next you'll configure the agent to enable Apache integration so we can see data about your web server's performance:
 
 When the agent installed, it included some example configuration files. Copy the Apache example into place for the agent to use:
 `sudo cp /etc/dd-agent/conf.d/apache.yaml.example /etc/dd-agent/conf.d/apache.yaml`
