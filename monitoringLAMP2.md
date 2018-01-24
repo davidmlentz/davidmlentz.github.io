@@ -38,7 +38,7 @@ Paste the your customized agent installation string onto your Ubuntu command lin
 
 Visit https://app.datadoghq.com/infrastructure to see your host(s). Click the name of your first host to see the metrics the agent is now reporting.
 
-![Host metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install.png "Host metrics")
+![Host metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Host%20Metrics.png "Host metrics")
 
 ## Apache
  
