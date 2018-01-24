@@ -95,9 +95,10 @@ You can generate some Apache metrics with the following command. This will reque
 
 ### View Apache Metrics on Datadog 
 
-The Datadog Agent is now collecting data about your web server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `apache.net.hits` in the Graph field.
+The Datadog agent is now collecting data about your web server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
 
-![Metric Explorer for Apache](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20apache.net.hits.png "Metric Explorer for Apache")
+![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard.png "Default Apache Dashboard")
+
 
 ## MySQL
 
@@ -139,9 +140,11 @@ You can generate some MySQL metrics with this command:
 
 ### View MySQL Metrics on Datadog
 
-To see how Datadog displays the metrics you just generated, navigate to the [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `mysql.performance.queries` in the Graph field.
+To see how Datadog displays the metrics you just generated, navigate to the [default MySQL dashboard](https://app.datadoghq.com/dash/integration/12/).
 
-![Metric Explorer for MySQL](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20mysql.performance.queries.png "Metric Explorer for MySQL")
+(screenshot: Default MySQL Dashboard)
+
+
 
 ## PHP 
 
