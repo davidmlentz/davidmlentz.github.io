@@ -22,9 +22,12 @@ To perform the steps in this guide, you'll need a Datadog account. Visit [https:
 ## Datadog integrations
 Within your Datadog account settings, you'll need to install integrations for the components of the LAMP stack to be monitored. 
 
-Click https://app.datadoghq.com/account/settings and type `Apache` in the search box. Select the tile for the Apache web server from the search results. Click the Integration tab and scroll to the bottom to click "Install."
+Note: as you install each of the integrations listed below, you'll see language on the Datadog site on how to configure 
+and validate each installation. We'll go through those steps in detail below, so for each of these integrations, you can scroll to the bottom of the configuration tab and click "Install Integration."
 
-Repeat this step to install integrations for MySQL and for PHP.
+1. Apache integration (https://app.datadoghq.com/account/settings#integrations/apache)
+1. MySQL integration (https://app.datadoghq.com/account/settings#integrations/mysql)
+1. PHP integration (https://app.datadoghq.com/account/settings#integrations/php)
 
 ## LAMP server
 
@@ -81,10 +84,10 @@ There's not much to see here yet, but this default dashboard displays the top-le
 
 The Datadog agent is now running on the LAMP host and collecting top-level metrics. Next you'll configure the Agent to enable Apache integration so you can see data about your web server's performance:
 
-When the agent installed, it included some example configuration files. Copy the Apache example into place for the agent to use:
+The Agent installation script placed some example configuration files on your server. Copy the Apache example into place for the Agent to use:
 `sudo cp /etc/dd-agent/conf.d/apache.yaml.example /etc/dd-agent/conf.d/apache.yaml`
 
-Next, restart the agent so your changes take effect:
+Next, restart the Agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
 
 ### Generate Sample Data
@@ -95,7 +98,7 @@ You can generate some Apache metrics with the following command. This will reque
 
 ### View Apache Metrics on Datadog 
 
-The Datadog agent is now collecting data about your web server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
+To see the Apache data the Agent is sending to your account, navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
 
 ![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard.png "Default Apache Dashboard")
 
@@ -104,7 +107,7 @@ The Datadog agent is now collecting data about your web server's performance and
 
 ### Configure the Agent
 
-To get information about your LAMP stack's database server performance, configure the agent to enable MySQL integration. (Note: the commands below contain a placeholder password--<mypassword>--which you should replace with an appropriate password to use with your Datadog MySQL user account.)
+To get information about your LAMP stack's database server performance, configure the Agent to enable MySQL integration. (Note: the commands below contain a placeholder password--<mypassword>--which you should replace with an appropriate password to use with your Datadog MySQL user account.)
 
 First, connect my MySQL as the root user and execute these queries:
 
@@ -144,23 +147,21 @@ To see how Datadog displays the metrics you just generated, navigate to the [def
 
 (screenshot: Default MySQL Dashboard)
 
-
-
 ## PHP 
+
+Using the Datadog PHP library, you can add code to your application to measure key performance indicators. Examples of useful PHP metrics include counting page loads and timing function calls. You can measure what's important to you, depending on your application, by strategically adding a small amount of code to your PHP files.
 
 ### Configure the Agent
 
-You'll create a simple PHP app. 
-You'll include code to add the Datadog PHP client to the app.
-Then you'll add some PHP code to collect and report metrics about the app's performance.
+To start measure PHP metrics, create a simple PHP app and require the Datadog PHP library.
 
-First, move into your LAMP server's web document root:
+Move into your LAMP server's web document root:
 `cd /var/www/html`
 
 Configure the web app to use the Datadog PHP integration:
 `composer require datadog/php-datadogstatsd`
 
-If you receive an error on this step, it could be that Composer hasn't been installed on your server. Execute this command to install Composer on an Ubuntu host:
+If you receive an error on this step, Composer may not be installed on your server. Execute this command to install Composer on an Ubuntu host:
 `sudo apt-get install -y composer php-curl`
 
 Create a PHP file by pasting the sample code, below:
@@ -208,12 +209,11 @@ To view the PHP application data you've generated, navigate to Datadog's [Metric
 
 # Viewing Data: Creating a Custom Dashboard in Datadog
 
-The steps above have used Datadog's Metric Explorer to see some initial metrics. Intead of looking at each of these separately, you can create a custom dashboard, combining relevant metrics to help visualize the performance the infrastructure and the application.
+The steps above have used Datadog's Metric Explorer and default dashboards to see some initial metrics. Intead of looking at each of these separately, you can create a custom dashboard, combining relevant metrics to help visualize the performance the infrastructure and the application.
 
-1. Dashboards
-1. New Dashboard
-1. Dashboard Name = "My Dashboard"
-1. New TimeBoard
+In [your Datadog account](https://app.datadoghq.com), click Dashboards in the left-side navigation, then click New Dashboard. Type a title for your dashboard in the Dashboard Name field, then click the New TimeBoard button. (The other option here is to create a ScreenBoard. For information on these two types of dashboards, see (TODO).)
+
+Follow these steps to add graphs to your timeboard to display information about your LAMP application.
 
 1. Drag the Timeseries widget onto the board
 1. Select your visualization: Leave as Timeseries
