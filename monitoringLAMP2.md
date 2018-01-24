@@ -105,7 +105,7 @@ The "Rate of requests" and "Bytes served" graphs should show some data correspon
 
 #### Configure the Agent
 
-To get information about your LAMP stack's database server performance, configure the Agent to enable MySQL integration. (Note: the commands below contain a placeholder password--`<mypassword>`--which you should replace with an appropriate password to use with your Datadog MySQL user account.)
+To get information about your LAMP stack's database server performance, configure the Agent to enable MySQL integration. (Note: the commands below contain a placeholder password&mdash;`<mypassword>`&mdash;which you should replace with an appropriate password to use with your Datadog MySQL user account.)
 
 First, connect my MySQL as the root user and execute these queries:
 
