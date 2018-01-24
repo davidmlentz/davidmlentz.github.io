@@ -72,8 +72,6 @@ The Datadog agent has gone to work already sending data about your server into y
 
 The [infrastructure list](https://app.datadoghq.com/infrastructure) in your Datadog account shows a list of your hosts that are being actively monitored by your Datadog account. Click the name of your first host to see the initial metrics.
 
-![Infrastructure list](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Infrastructure%20list.png "Infrastructure list")
-
 ![Host metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Host%20Metrics.png "Host metrics")
 
 There's not much to see here yet, but this default dashboard displays the top-level metrics for each host running the Datadog agent. The following steps will guide you to start gathering metrics on the performance of your Apache server.
