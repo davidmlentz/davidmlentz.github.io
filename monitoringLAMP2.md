@@ -21,20 +21,20 @@ The Datadog Agent runs on your host and is responsible for collecting metrics an
 
 ## Installing the Agent
 
+
+### Copy Agent Install String
+
 `DD_API_KEY=[your Datadog API key] bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/dd-agent/master/packaging/datadog-agent/source/install_agent.sh)"`
 
 See also https://app.datadoghq.com/account/settings#agent/ubuntu
 
 ![here is an image](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install.png "One-step agent installation")
 
-### Copy Agent Install String
-
-[[https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install.png|alt=installation]]
-
 ### Execute Agent Install String
 
-### View Host Metrics on Datadog
+(screenshot)
 
+### View Host Metrics on Datadog
 
 (screenshot)
 
