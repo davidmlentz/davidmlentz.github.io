@@ -131,8 +131,6 @@ Update the Database section of this file to reflect the user and password from t
 
 ![MySQL configuration](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/MySQL%20config_1.png "MySQL configuration")
 
-![MySQL configuration](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/MySQL%20config_2.png "MySQL configuration")
-
 Next, restart the agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
 
