@@ -19,6 +19,13 @@ Once the Agent is running and the host is configured, you'll see how to look at 
 ## Datadog account
 To perform the steps in this guide, you'll need a Datadog account. Visit [https://www.datadoghq.com/](https://www.datadoghq.com/) to create a free account, or to log in if you already have one.
 
+## Datadog integrations
+Within your Datadog account settings, you'll need to install integrations for the components of the LAMP stack to be monitored. 
+
+Click https://app.datadoghq.com/account/settings and type `Apache` in the search box. Select the tile for the Apache web server from the search results. Click the Integration tab and scroll to the bottom to click "Install."
+
+Repeat this step to install integrations for MySQL and for PHP.
+
 ## LAMP server
 
 This assumes you have an Ubuntu server configured as a LAMP stack. (The commands below were executed on a virtual server running Ubuntu 16.04. These commands and sample code should work correctly on any similar Debian-based server. If you're using an RPM-based server, you'll need to make the necessary substitutions for the `apt-get` steps.) 
