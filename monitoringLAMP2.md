@@ -72,8 +72,9 @@ There's not much to show here yet, but this default dashboard displays the top-l
  
 ### Configure the Agent
 
-In the last step, you installed the Datadog agent on your LAMP server. Next you'll configure the agent to enable Apache integration:
+In the last step, you installed the Datadog agent on your LAMP server and began automatically collecting top-level metrics about your Linxu host. Next you'll configure the agent to enable Apache integration so we can see data about your web server's performance:
 
+When the agent installed, it included some example configuration files. Copy the Apache example into place for the agent to use:
 `sudo cp /etc/dd-agent/conf.d/apache.yaml.example /etc/dd-agent/conf.d/apache.yaml`
 
 Next, restart the agent so your changes take effect:
@@ -81,15 +82,15 @@ Next, restart the agent so your changes take effect:
 
 ### Generate Sample Data
 
-You can generate some metrics (page hits) with this command. (This will request a non-existent page on your server, and the resulting errors will be visible in your Datadog dashboard).
+You can generate some metrics with the following command. (This will request a non-existent page on your server, and the resulting errors will be visible in your Datadog dashboard).
 
 `for i in {1..99}; do wget http://localhost/404.html; done && rm 404.html*`
 
-### View Apache Metrics on Datadog (default Apache dashboard)
+### View Apache Metrics on Datadog 
 
-Go to https://app.datadoghq.com/metric/explorer and type apache.net.hits in the Graph field.
+The Datadog agent is now collecting data about your web server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
 
-![Metric Explorer for Apache](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20apache.net.hits.png "Metric Explorer for Apache")
+(screenshot)
 
 ## MySQL
 
@@ -119,11 +120,11 @@ Next, restart the agent so your changes take effect:
 You can generate some metrics with this command:
 `for i in {1..99}; do mysql -u datadog --password=mypassword -e "select now();"; done`
 
-### View MySQL Metrics on Datadog (default MySQL dashboard)
+### View MySQL Metrics on Datadog
 
-Go to https://app.datadoghq.com/metric/explorer and type mysql.performance.queries in the Graph field.
+The Datadog agent is now collecting data about your MySQL server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [default MySQL dashboard](TODO: url).
 
-![Metric Explorer for MySQL](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20mysql.performance.queries.png "Metric Explorer for MySQL")
+(screenshot)
 
 ## PHP 
 
