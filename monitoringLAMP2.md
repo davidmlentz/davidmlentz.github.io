@@ -21,22 +21,24 @@ The Datadog Agent runs on your host and is responsible for collecting metrics an
 
 ## Installing the Agent
 
+
+### Copy Agent Install String
+
 `DD_API_KEY=[your Datadog API key] bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/dd-agent/master/packaging/datadog-agent/source/install_agent.sh)"`
 
 See also https://app.datadoghq.com/account/settings#agent/ubuntu
 
-
-
-### Copy Agent Install String
-
-(screenshot)
+![One-step agent installation](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install.png "One-step agent installation")
 
 ### Execute Agent Install String
 
+Paste the your customized agent installation string onto your Ubuntu command line and execute it.
+
 ### View Host Metrics on Datadog
 
+Visit https://app.datadoghq.com/infrastructure to see your host(s). Click the name of your first host to see the metrics the agent is now reporting.
 
-(screenshot)
+![Host metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install.png "Host metrics")
 
 ## Apache
  
@@ -57,9 +59,9 @@ You can generate some metrics (page hits) with this command. (This will request 
 
 ### View Apache Metrics on Datadog (default Apache dashboard)
 
-(screenshot)
-apache.net.hits
-https://app.datadoghq.com/metric/explorer
+Go to https://app.datadoghq.com/metric/explorer and type apache.net.hits in the Graph field.
+
+![Metric Explorer for Apache](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20apache.net.hits.png "Metric Explorer for Apache")
 
 ## MySQL
 
@@ -91,9 +93,9 @@ You can generate some metrics with this command:
 
 ### View MySQL Metrics on Datadog (default MySQL dashboard)
 
-(screenshot)
-mysql.performance.queries
-https://app.datadoghq.com/metric/explorer
+Go to https://app.datadoghq.com/metric/explorer and type mysql.performance.queries in the Graph field.
+
+![Metric Explorer for MySQL](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20mysql.performance.queries.png "Metric Explorer for MySQL")
 
 ## PHP 
 
@@ -150,9 +152,9 @@ You can generate some metrics with this command:
 
 ### View PHP Metrics on Datadog
 
-(screenshot)
-functionCalls.count
-https://app.datadoghq.com/metric/explorer
+Go to https://app.datadoghq.com/metric/explorer and type mysql.performance.queries in the Graph field.
+
+![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg.png "Metric Explorer for PHP")
 
 # Viewing Data: Creating a Custom Dashboard in Datadog
 
@@ -169,6 +171,8 @@ At each step above, we've looked at Datadog's Metric Explorer to see some initia
 1. Repeat these steps, but use mysql.performance.queries as the "Get" value
 1. Repeat these steps, but use functionCalls.count as the "Get" value
 1. Repeat these steps, but use functionTime.duration.avg as the "Get" value
+
+![Custom Datadog Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/My%20Dashboard.png "Custom Datadog Dashboard")
 
 # Conclusion
 (screenshot)
