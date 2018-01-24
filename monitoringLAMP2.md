@@ -88,18 +88,9 @@ You can generate some metrics with the following command. (This will request a n
 
 ### View Apache Metrics on Datadog 
 
-The Datadog agent is now collecting data about your web server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
+The Datadog agent is now collecting data about your web server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `apache.net.hits` in the Graph field.
 
-![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard.png "Default Apache Dashboard")
-
-(TODO: In think this approach requires that the Apache Integration be installed at datadoghq.com. See below for an alternative approach.)
-
-### View Apache Metrics on Datadog 
-
-The Datadog agent is now collecting data about your web server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `mysql.performance.queries` in the Graph field.
-
-![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg.png "Metric Explorer for PHP")
-
+![Metric Explorer for Apache](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20apache.net.hits.png "Metric Explorer for Apache")
 
 ## MySQL
 
@@ -131,9 +122,11 @@ You can generate some metrics with this command:
 
 ### View MySQL Metrics on Datadog
 
-The Datadog agent is now collecting data about your MySQL server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [default MySQL dashboard](TODO: url).
+### View Apache Metrics on Datadog 
 
-(screenshot)
+The Datadog agent is now collecting data about your MySQL server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `mysql.performance.queries` in the Graph field.
+
+![Metric Explorer for MySQL](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20mysql.performance.queries.png "Metric Explorer for MySQL")
 
 ## PHP 
 
@@ -190,7 +183,7 @@ You can generate some metrics with this command:
 
 ### View PHP Metrics on Datadog
 
-Go to https://app.datadoghq.com/metric/explorer and type mysql.performance.queries in the Graph field.
+The Datadog agent is now collecting data about your MySQL server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `functionTime.duration.avg` in the Graph field.
 
 ![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg.png "Metric Explorer for PHP")
 
