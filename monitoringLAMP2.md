@@ -32,15 +32,13 @@ Install Apache, MySQL and PHP:
 We'll need Composer for configuring PHP in the steps below. Composer itself requires Curl, so install both of them:
 `sudo apt-get install -y composer php-curl`
 
-# The Datadog Agent
+# Installing the Agent on your Linux Host
 
 The Datadog Agent runs on your host and is responsible for collecting metrics and sending data to Datadog so you can view it in your account.
 
-## Installing the Agent
+## What is the agent?
 
-### What is the agent?
-
-### Copy Agent Install String
+## Copy Agent Install String
 
 Within your Datadog account, you can find an installation command that's customized for your use. This includes your API key, which is necessary to authorize the agent to send your data to your Datadog account.
 
@@ -50,10 +48,11 @@ Navigate to the [Agent Installation page](https://app.datadoghq.com/account/sett
 
 Copy this to your clipboard.
 
-### Execute Agent Install String
+## Execute Agent Install String
 
-At your Ubuntu command line, paste your customized agent installation string and hit enter.
-TODO: describe what will happen. Sudo? Password? Delay?
+At your Ubuntu command line, paste your customized agent installation string and hit enter. The agent will install itself and begin sending metrics to Datadog. The process will end with a pause while the agent confirms that initial metrics are being collected and sent successfully.
+
+![Waiting for metrics]( "Waiting for metrics")
 
 ### View Host Metrics on Datadog
 
