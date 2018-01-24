@@ -105,7 +105,7 @@ To see the Apache data the Agent is sending to your account, navigate to Datadog
 
 ### Configure the Agent
 
-To get information about your LAMP stack's database server performance, configure the Agent to enable MySQL integration. (Note: the commands below contain a placeholder password--<mypassword>--which you should replace with an appropriate password to use with your Datadog MySQL user account.)
+To get information about your LAMP stack's database server performance, configure the Agent to enable MySQL integration. (Note: the commands below contain a placeholder password--`<mypassword>`--which you should replace with an appropriate password to use with your Datadog MySQL user account.)
 
 First, connect my MySQL as the root user and execute these queries:
 
@@ -128,6 +128,10 @@ Then edit the file to update connection information so the Agent can connect to 
 `sudo vi /etc/dd-agent/conf.d/mysql.yaml`
 
 Update the Database section of this file to reflect the user and password from the SQL statements above.
+
+![MySQL configuration](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/MySQL%20config_1.png "MySQL configuration")
+
+![MySQL configuration](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/MySQL%20config_2.png "MySQL configuration")
 
 Next, restart the agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
