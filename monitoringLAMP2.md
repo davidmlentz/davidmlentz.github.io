@@ -224,7 +224,7 @@ Follow these steps to add graphs to your timeboard to display information about 
 1. Repeat these steps, but use functionCalls.count as the "Get" value
 1. Repeat these steps, but use functionTime.duration.avg as the "Get" value
 
-![Custom Datadog Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/My%20Dashboard_2.png "Custom Datadog Dashboard")
+![Custom Datadog Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/My%20dashboard_2.png "Custom Datadog Dashboard")
 
 ## Conclusion
 
