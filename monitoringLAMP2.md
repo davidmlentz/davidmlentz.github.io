@@ -90,7 +90,7 @@ You can generate some metrics with the following command. (This will request a n
 
 The Datadog agent is now collecting data about your web server's performance and sending it to your Datadog account. Let's take a look. Navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
 
-(screenshot)
+![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard.png "Default Apache Dashboard")
 
 (TODO: In think this approach requires that the Apache Integration be installed at datadoghq.com. See below for an alternative approach.)
 
