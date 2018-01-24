@@ -4,7 +4,7 @@
 
 ### What is the LAMP stack?
 
-Web applications of any size have some common requirements: a web server, and usually a database and a server-side language. The LAMP stack--a combination of Linux, Apache, MySQL and PHP (or alternatively Python)--is one way to bring together the technologies required to power a scalable and dynamic web application. 
+Web applications of any size have some common requirements: a web server, and usually a database and a server-side language. The LAMP stack&mdash;a combination of Linux, Apache, MySQL and PHP (or alternatively Python)&mdash;is one way to bring together the technologies required to power a scalable and dynamic web application. 
 
 ### Why is monitoring the LAMP stack important?
 
@@ -12,14 +12,14 @@ Your users' experience depends on the performance of your infrastructure. By bri
 
 ### What you'll learn in this post
 
-Collecting and displaying valuable, actionable data starts with a few small steps. This article will guide you through installing and configuring the Datadog Agent, and instrumenting some basic code to gather the type of data that can help you understand your application's performance.
+Collecting and displaying valuable, actionable data starts with a few small steps. This article guides you through installing and configuring the Datadog Agent, and instrumenting some basic code to gather the type of data that can help you understand your application's performance.
 
 Once the Agent is running and the host is configured, you'll see how to look at the data displayed in your Datadog account. You'll see some default dashboards first, then finish by creating a basic customized that combines metrics from the various components of your LAMP stack.
 
 ## Prerequisites
 
 ### Datadog account
-To perform the steps in this guide, you'll need a Datadog account. Visit [https://www.datadoghq.com/](https://www.datadoghq.com/) to create a free account, or to log in if you already have one.
+To perform the steps in this guide, you'll need a Datadog account. See [https://www.datadoghq.com/](https://www.datadoghq.com/) to create a free account, or to log in if you already have one.
 
 ### Datadog integrations
 Within your Datadog account settings, you'll need to install integrations for the components of the LAMP stack to be monitored. 
@@ -53,7 +53,7 @@ The Agent runs on your host and is responsible for collecting metrics and sendin
 
 Within your Datadog account, you can find an Agent installation command that's customized for your use. This includes your API key, which is necessary to authorize the Agent to send metrics to Datadog.
 
-Navigate to the [Agent installation instructions](https://app.datadoghq.com/account/settings#agent/ubuntu) to see your unique Agent installation string. (Notice the different platforms listed on the left side of the page. As you add infrastructure of various types, this page will create the appropriate Agent installation command for each of them.)
+Navigate to the [Agent installation instructions](https://app.datadoghq.com/account/settings#agent/ubuntu) to see your unique Agent installation string. (Notice the different platforms listed on the left side of the page. As you add infrastructure of various types, this page provides the appropriate Agent installation command for each of them.)
 
 ![One-step agent installation](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install_b.png "One-step agent installation")
 
@@ -61,7 +61,7 @@ Copy the Agent installation command (the string starting with "DD_API_KEY=") to 
 
 ### Execute the Agent installation string
 
-At your Ubuntu command line, paste the Agent installation command and hit enter. The Agent will install and begin sending metrics to Datadog. The process will end with a pause while the agent confirms that initial metrics are being collected and sent successfully.
+At your Ubuntu command line, paste the Agent installation command and hit enter. The Agent installs and begins sending metrics to Datadog. The process ends with a pause while the agent confirms that initial metrics are being collected and sent successfully.
 
 ![Waiting for metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Waiting%20for%20metrics_c.png "Waiting for metrics")
 
