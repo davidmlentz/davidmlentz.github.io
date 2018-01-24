@@ -25,11 +25,11 @@ The Datadog Agent runs on your host and is responsible for collecting metrics an
 
 See also https://app.datadoghq.com/account/settings#agent/ubuntu
 
-
+![here is an image](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install.png "One-step agent installation")
 
 ### Copy Agent Install String
 
-(screenshot)
+[[https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install.png|alt=installation]]
 
 ### Execute Agent Install String
 
