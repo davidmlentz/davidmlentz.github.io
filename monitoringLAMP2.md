@@ -32,9 +32,11 @@ See also https://app.datadoghq.com/account/settings#agent/ubuntu
 
 ### Execute Agent Install String
 
-(screenshot)
+Paste the your customized agent installation string onto your Ubuntu command line and execute it.
 
 ### View Host Metrics on Datadog
+
+Visit https://app.datadoghq.com/infrastructure to see your host(s). Click the name of your first host to see the metrics the agent is now reporting.
 
 (screenshot)
 
