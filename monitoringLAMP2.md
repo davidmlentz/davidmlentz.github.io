@@ -42,7 +42,7 @@ If your Unbuntu server isn't already running Apache, MySQL, and PHP, follow thes
 
 ## Installing the Datadog Agent on a Linux host
 
-The Agent runs on your host and is responsible for collecting metrics and sending data to Datadog so you can view it in your account.
+The Agent runs on your host and is responsible for collecting metrics and sending data to your Datadog account.
 
 ### Copy the Agent installation string
 
