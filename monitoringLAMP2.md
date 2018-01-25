@@ -106,7 +106,7 @@ To get information about your LAMP stack's database server performance, configur
 
 Note: the commands below contain a placeholder password&mdash;`<mypassword>`&mdash;which you should replace with an appropriate password to use with your Datadog MySQL user account.
 
-First, connect my MySQL as the root user and execute these queries:
+First, connect to my MySQL as the root user and execute these queries:
 
 `CREATE USER 'datadog'@'localhost' IDENTIFIED BY '<mypassword>';`
 
