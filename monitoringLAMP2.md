@@ -8,7 +8,7 @@ Web applications of all sizes have some common requirements: a web server, and u
 
 ### Why is monitoring the LAMP stack important?
 
-Your users' experience depends on the performance of your infrastructure. By bringing your LAMP stack's performance data into Datadog, you can visualize and communicate information that represents steady state performance, outages and incidents, scalability needs, and potential problems. That information should form the basis for your decisions as you maintain your application, determining future application development and technology architecture.
+Your users' experience depends on the performance of your infrastructure. By bringing your LAMP stack's performance data into Datadog, you can visualize and communicate information that represents steady state performance, outages and incidents, scalability needs, and potential problems. That information should form the basis for your decisions as you maintain your application, shaping future development and architecture plans.
 
 ### What you'll learn in this post
 
