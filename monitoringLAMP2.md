@@ -36,14 +36,9 @@ This guide assumes you have an Ubuntu server configured as a LAMP stack. (The co
 
 If your Unbuntu server isn't already running Apache, MySQL, and PHP, follow these steps:
 
-Ensure that your package lists are up to date:
-`sudo apt-get update`
-
-Install Apache, MySQL and PHP:
-`sudo apt-get install -y apache2 mysql-server php libapache2-mod-php`
-
-Install Composer, which you'll need for configuring PHP to work with Datadog. Composer itself requires Curl, so install them both:
-`sudo apt-get install -y composer php-curl`
+1. Ensure that your package lists are up to date: `sudo apt-get update`
+1. Install Apache, MySQL and PHP: `sudo apt-get install -y apache2 mysql-server php libapache2-mod-php`
+1. Install Composer, which you'll need for configuring PHP to work with Datadog. Composer itself requires Curl, so install them both: `sudo apt-get install -y composer php-curl`
 
 ## Installing the Datadog Agent on a Linux host
 
