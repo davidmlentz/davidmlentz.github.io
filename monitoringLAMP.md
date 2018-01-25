@@ -89,7 +89,7 @@ You can generate some Apache metrics with the following command:
 
 ### View Apache metrics in Datadog 
 
-To see the Apache data the Agent sent to your account, navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
+Navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
 
 ![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard_2.png "Default Apache Dashboard")
 
