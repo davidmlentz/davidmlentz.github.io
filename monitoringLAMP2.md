@@ -19,7 +19,7 @@ Once the Agent is running and the host is configured, you'll see how to view app
 ## Prerequisites
 
 ### Datadog account
-To perform the steps in this guide, you'll need a Datadog account. See [https://www.datadoghq.com/](https://www.datadoghq.com/) to create a free account, or to log in if you already have one.
+To perform the steps in this guide, you'll need a Datadog account. See [https://www.datadoghq.com/](https://www.datadoghq.com/) to log in, or to create a free trial account.
 
 ### Datadog integrations
 Within your Datadog account settings, you'll need to install integrations for the components of the LAMP stack to be monitored. 
@@ -236,4 +236,4 @@ In this short tutorial, you've installed the Datadog Agent on your LAMP host, ad
 
 The simple examples here demonstrate how to use Datadog to monitor your LAMP application and infrastructure. As the complexity of your app grows, you can apply these steps in your ongoing development and expanding infrastructure. Your Datadog account will collect and display your expanding data, continuing to provide information critical to keeping your application performing successfully.
 
-Sign up for a free trial with Datadog at [https://www.datadoghq.com](https://www.datadoghq.com).
+Sign up for a free Datadog trial account at [https://www.datadoghq.com](https://www.datadoghq.com).
