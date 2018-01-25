@@ -127,7 +127,7 @@ Update the `user` and `pass` values in this file to reflect the user and passwor
 
 ![MySQL configuration](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/MySQL%20config_1.png "MySQL configuration")
 
-Next, restart the agent so your changes take effect:
+Next, restart the Agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
 
 The Datadog Agent is now collecting data about your MySQL server's performance.
@@ -148,7 +148,7 @@ To see how Datadog displays the metrics you just generated, navigate to the [def
 
 Using the Datadog PHP library, you can measure application performance indicators&mdash;such as page loads and function speed&mdash;by strategically adding a small amount of code to your PHP files.
 
-### Configure the Agent
+### Create a simple PHP application
 
 To start reporting PHP metrics, create a simple PHP app that requires the Datadog PHP library.
 
@@ -184,7 +184,7 @@ PHP sample code:
   echo "Hello world";
 ?>
 ```
-The Datadog agent is now ready to collect and report data about your PHP application.
+The Datadog Agent is now ready to collect and report data about your PHP application.
 
 ### Generate sample data
 
