@@ -56,7 +56,7 @@ Copy the Agent installation command (the string starting with "DD_API_KEY=") to 
 
 ### Execute the Agent installation string
 
-At your Ubuntu command line, paste the Agent installation command and hit enter. The Agent installs and begins sending metrics to Datadog. The process ends with a pause while the agent confirms that initial metrics are being collected and sent successfully.
+At your Ubuntu command line, paste the Agent installation command and hit enter. The Agent installs and begins sending metrics to Datadog. The process ends with a pause while the Agent confirms that initial metrics are being collected and sent successfully.
 
 ![Waiting for metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Waiting%20for%20metrics_c.png "Waiting for metrics")
 
