@@ -8,13 +8,13 @@ The LAMP stack&mdash;a combination of Linux, Apache, MySQL and PHP (or alternati
 
 ### Why is monitoring the LAMP stack important?
 
-Your users' experience depends on the performance of your infrastructure. By bringing your LAMP stack's performance data into Datadog, you can visualize and communicate information that represents steady state performance, outages and incidents, scalability needs, and potential problems.
+By bringing your LAMP stack's performance data into Datadog, you can visualize and communicate information that represents application performance, outages and incidents, scalability needs, and potential problems.
 
 ### What you'll learn in this post
 
-This article guides you through installing and configuring the Datadog Agent, and instrumenting some basic code to gather the type of data that can help you understand your application's performance.
+This article guides you through installing and configuring the Datadog Agent and instrumenting some basic code to gather the type of data that can help you understand your application's performance.
 
-Once the Agent is running and the host is configured, you'll view application data within your Datadog account using default dashboards. You'll finish by creating a basic customized dashboard that combines metrics from all the components of your LAMP stack.
+Once the Agent is running, you'll view application data in Datadog's default dashboards. You'll finish by creating a basic customized dashboard that combines metrics from all components of your LAMP stack.
 
 ## Prerequisites
 
