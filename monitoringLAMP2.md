@@ -14,7 +14,7 @@ Your users' experience depends on the performance of your infrastructure. By bri
 
 Collecting and displaying valuable, actionable data starts with a few small steps. This article guides you through installing and configuring the Datadog Agent, and instrumenting some basic code to gather the type of data that can help you understand your application's performance.
 
-Once the Agent is running and the host is configured, you'll see how to look at the data displayed in your Datadog account. You'll see some default dashboards first, then finish by creating a basic customized that combines metrics from the various components of your LAMP stack.
+Once the Agent is running and the host is configured, you'll see how to view application data within your Datadog account. You'll see some default dashboards first, then finish by creating a basic customized that combines metrics from the various components of your LAMP stack.
 
 ## Prerequisites
 
