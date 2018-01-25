@@ -4,17 +4,17 @@
 
 ### What is the LAMP stack?
 
-Web applications of all sizes have some common requirements: a web server, and usually a database and a server-side language. The LAMP stack&mdash;a combination of Linux, Apache, MySQL and PHP (or alternatively Python)&mdash;is one way to bring together the technologies required to power a scalable and dynamic web application. 
+The LAMP stack&mdash;a combination of Linux, Apache, MySQL and PHP (or alternatively Python)&mdash;is one way to bring together the technologies required to power a scalable and dynamic web application. 
 
 ### Why is monitoring the LAMP stack important?
 
-Your users' experience depends on the performance of your infrastructure. By bringing your LAMP stack's performance data into Datadog, you can visualize and communicate information that represents steady state performance, outages and incidents, scalability needs, and potential problems. That information should form the basis for your decisions as you maintain your application, shaping future development and architecture plans.
+Your users' experience depends on the performance of your infrastructure. By bringing your LAMP stack's performance data into Datadog, you can visualize and communicate information that represents steady state performance, outages and incidents, scalability needs, and potential problems.
 
 ### What you'll learn in this post
 
-Collecting and displaying valuable, actionable data starts with a few small steps. This article guides you through installing and configuring the Datadog Agent, and instrumenting some basic code to gather the type of data that can help you understand your application's performance.
+This article guides you through installing and configuring the Datadog Agent, and instrumenting some basic code to gather the type of data that can help you understand your application's performance.
 
-Once the Agent is running and the host is configured, you'll see how to view application data within your Datadog account. You'll see some default dashboards first, then finish by creating a basic customized dashboard that combines metrics from all the components of your LAMP stack.
+Once the Agent is running and the host is configured, you'll view application data within your Datadog account using default dashboards. You'll finish by creating a basic customized dashboard that combines metrics from all the components of your LAMP stack.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ To perform the steps in this guide, you'll need a Datadog account. See [https://
 ### Datadog integrations
 Within your Datadog account settings, you'll need to install integrations for the components of the LAMP stack to be monitored. 
 
-Note: as you install each of the integrations listed below, you'll see instructions on configuring and validating each installation. We'll go through those steps in detail below, so at this stage you can scroll to the bottom of the Configuration tab and click "Install Integration."
+Note: as you install each of these integrations, you'll see instructions on configuring and validating each installation. We'll go through those steps in detail below, so at this stage you can scroll to the bottom of the Configuration tab and click "Install Integration."
 
 1. [Apache integration](https://app.datadoghq.com/account/settings#integrations/apache)
 1. [MySQL integration](https://app.datadoghq.com/account/settings#integrations/mysql)
@@ -32,11 +32,11 @@ Note: as you install each of the integrations listed below, you'll see instructi
 
 ### LAMP server
 
-This guide assumes you have an Ubuntu server configured as a LAMP stack. (The commands below were executed on a virtual server running Ubuntu 16.04. These commands and sample code should work correctly on any Debian-based server. If you're using an RPM-based server, you'll need to make the necessary substitutions for the `apt-get` steps.) 
+This guide assumes you have a LAMP stack running on a Ubuntu server. (The commands below were executed on Ubuntu 16.04. These commands and sample code should work correctly on any Debian-based server. If you're using an RPM-based server, you'll need to make the necessary substitutions for the `apt-get` steps.) 
 
 If your Unbuntu server isn't already running Apache, MySQL, and PHP, follow these steps:
 
-1. Ensure that your package lists are up to date: `sudo apt-get update`
+1. Update your package lists: `sudo apt-get update`
 1. Install Apache, MySQL and PHP: `sudo apt-get install -y apache2 mysql-server php libapache2-mod-php`
 1. Install Composer, which you'll need for configuring PHP to work with Datadog. Composer itself requires Curl, so install them both: `sudo apt-get install -y composer php-curl`
 
@@ -64,11 +64,11 @@ Once installation is verified, you'll see a message confirming that the agent is
 
 ### View host metrics on Datadog
 
-The [infrastructure list](https://app.datadoghq.com/infrastructure) in your Datadog account shows a list of your hosts that are being actively monitored by your Datadog account. Click the name of your first host to see the initial metrics.
+The [infrastructure list](https://app.datadoghq.com/infrastructure) in your Datadog account shows a list of hosts actively monitored by your Datadog account. Click the name of your first host to see the initial metrics.
 
 ![Host metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Host%20Metrics.png "Host metrics")
 
-There's not much to see here yet, but this default dashboard displays the top-level metrics for each host running the Datadog agent. Next, you'll start gathering metrics on the performance of your Apache server.
+This default dashboard displays the top-level metrics for each host running the Datadog agent. Next, you'll start gathering metrics on the performance of your Apache server.
 
 ## Getting started monitoring Apache
  
@@ -93,7 +93,7 @@ Navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/scree
 
 ![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard_2.png "Default Apache Dashboard")
 
-The graphs should show some data corresponding to the `wget` command you executed above. If you don't see any metrics here, you may need to enable Apache's status module, mod_status. See [How to collect Apache performance metrics](https://www.datadoghq.com/blog/collect-apache-performance-metrics/#apache-s-status-module) for more information about mod_status.
+The graphs should show data corresponding to the `wget` command you executed above. If you don't see any data, you may need to enable Apache's status module, mod_status. See [How to collect Apache performance metrics](https://www.datadoghq.com/blog/collect-apache-performance-metrics/#apache-s-status-module) for more information about mod_status.
 
 ## Getting started monitoring MySQL
 
