@@ -101,6 +101,8 @@ To see the Apache data the Agent is sending to your account, navigate to Datadog
 
 The "Rate of requests" and "Bytes served" graphs should show some data corresponding to the `wget` command you executed above.
 
+Note: if you don't see any metrics reported at this point, you may need to enable Apache's status module, mod_status. See [How to collect Apache performance metrics](https://www.datadoghq.com/blog/collect-apache-performance-metrics/#apache-s-status-module) for more information about mod_status.
+
 ### Getting started monitoring MySQL
 
 #### Configure the Agent
@@ -207,9 +209,11 @@ To view the PHP application data you've generated, navigate to Datadog's [Metric
 
 ![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg_2.png "Metric Explorer for PHP")
 
+To learn more about collecting PHP metrics, see [this GitHub repository.](https://github.com/DataDog/php-datadogstatsd)
+
 ## Creating a custom dashboard in Datadog
 
-The steps above have used Datadog's Metric Explorer and default dashboards to see some initial metrics. Intead of looking at each of these separately, you can create a custom dashboard, combining relevant metrics to help visualize the performance the infrastructure and the application.
+The steps above have used Datadog's Metric Explorer and default dashboards to see some initial metrics. Intead of looking at metrics separately, you can create a custom dashboard, combining relevant metrics to help visualize the performance the infrastructure and the application.
 
 In [your Datadog account](https://app.datadoghq.com), click Dashboards in the left-side navigation, then click New Dashboard. Type a title for your dashboard in the Dashboard Name field, then click the New TimeBoard button. (The other option here is to create a ScreenBoard. For information on these two types of dashboards, see [this FAQ article](https://help.datadoghq.com/hc/en-us/articles/204580349-What-is-the-difference-between-a-ScreenBoard-and-a-TimeBoard-).)
 
@@ -224,8 +228,12 @@ Follow these steps to add graphs to your timeboard to display information about 
 
 ![Custom Datadog Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/My%20dashboard_2.png "Custom Datadog Dashboard")
 
+You can continue to customize this dashboard by adding any widgets you feel might be useful. To save your customized dashboard, click the "Finish Editing" button at the top of the page.
+
 ## Conclusion
 
-In this short tutorial, you've installed the Datadog Agent on your LAMP host, installed Datadog integrations for the LAMP stack, and created a custom dashboard to view application metrics.
+In this short tutorial, you've installed the Datadog Agent on your LAMP host, added Datadog integrations for the LAMP stack, and created a custom dashboard to view application metrics.
 
-(TODO: "Call-to-action with signup link for Datadog trial")
+The simple examples here demonstrate how to use Datadog to monitor your LAMP application and infrastructure. As the complexity of your app grows, you can apply these steps in your ongoing development and expanding infrastructure. Your Datadog account will collect and display your expanding data, continuing to provide information critical to keeping your application performing successfully.
+
+Sign up for a free trial with Datadog at [https://www.datadoghq.com](https://www.datadoghq.com).
