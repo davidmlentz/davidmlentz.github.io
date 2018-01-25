@@ -213,7 +213,7 @@ Follow these steps to add graphs to your timeboard to display information about 
 1. Drag the Timeseries widget onto the board
 1. Under "Choose metrics and events," change the "Get" value to "apache.net.hits" and click "Save."
 
-Repeat these steps to add three other Timeseries widgets, replacing the "Get" value with the following:
+Repeat the steps above to add three other Timeseries widgets, replacing the "Get" value with the following:
 1. "mysql.performance.queries"
 1. "functionCalls.count"
 1. "functionTime.duration.avg"
