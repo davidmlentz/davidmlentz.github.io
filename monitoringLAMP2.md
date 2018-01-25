@@ -228,6 +228,6 @@ You can continue to customize this dashboard by adding any widgets you feel migh
 
 In this short tutorial, you've installed the Datadog Agent on your LAMP host, added Datadog integrations for the LAMP stack, and created a custom dashboard to view application metrics.
 
-The simple examples here demonstrate how to use Datadog to monitor your LAMP application and infrastructure. As the complexity of your app grows, you can apply these steps in your ongoing development and expanding infrastructure. Your Datadog account will collect and display your expanding data, continuing to provide information critical to keeping your application performing successfully.
+The simple examples here demonstrate how to use Datadog to monitor the LAMP stack. As the complexity of your app grows, you can apply these to your growing codebase and infrastructure. Datadog will collect and display your expanding data, helping you visualize the performance of your application and infrastructure.
 
 Sign up for a free Datadog trial account at [https://www.datadoghq.com](https://www.datadoghq.com).
