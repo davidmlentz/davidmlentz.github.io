@@ -62,7 +62,7 @@ At your Ubuntu command line, paste the Agent installation command and hit enter.
 
 Once installation is verified, you'll see a message confirming that the agent is functioning properly.
 
-#### View host metrics on Datadog
+### View host metrics on Datadog
 
 The Datadog Agent has gone to work already sending data about your server into your Datadog account. Let's take a look:
 
@@ -72,9 +72,9 @@ The [infrastructure list](https://app.datadoghq.com/infrastructure) in your Data
 
 There's not much to see here yet, but this default dashboard displays the top-level metrics for each host running the Datadog agent. Next, you'll start gathering metrics on the performance of your Apache server.
 
-### Getting started monitoring Apache
+## Getting started monitoring Apache
  
-#### Configure the Agent
+### Configure the Agent
 
 The Agent installation script placed some example configuration files on your server. To begin collecting Apache metrics, copy the Apache example configuration file into place for the Agent to use:
 `sudo cp /etc/dd-agent/conf.d/apache.yaml.example /etc/dd-agent/conf.d/apache.yaml`
@@ -82,13 +82,13 @@ The Agent installation script placed some example configuration files on your se
 Next, restart the Agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
 
-#### Generate sample data
+### Generate sample data
 
 You can generate some Apache metrics with the following command. This will request a non-existent page on your server, but the requests will be visible in your Datadog dashboard.
 
 `for i in {1..99}; do wget http://localhost/404.html; done && rm 404.html*`
 
-#### View Apache metrics in Datadog 
+### View Apache metrics in Datadog 
 
 To see the Apache data the Agent sent to your account, navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/screen/integration/19/apache).
 
@@ -98,9 +98,9 @@ The "Rate of requests" and "Bytes served" graphs should show some data correspon
 
 Note: if you don't see any metrics reported at this point, you may need to enable Apache's status module, mod_status. See [How to collect Apache performance metrics](https://www.datadoghq.com/blog/collect-apache-performance-metrics/#apache-s-status-module) for more information about mod_status.
 
-### Getting started monitoring MySQL
+## Getting started monitoring MySQL
 
-#### Configure the Agent
+### Configure the Agent
 
 To get information about your LAMP stack's database server performance, configure the Agent to report MySQL metrics. 
 
@@ -135,22 +135,22 @@ Next, restart the agent so your changes take effect:
 
 The Datadog Agent is now collecting data about your MySQL server's performance and sending it to your Datadog account.
 
-#### Generate sample data
+### Generate sample data
 
 You can generate some MySQL metrics with this command:
 `for i in {1..99}; do mysql -u datadog --password=<mypassword> -e "select now();"; done`
 
-#### View MySQL metrics in Datadog
+### View MySQL metrics in Datadog
 
 To see how Datadog displays the metrics you just generated, navigate to the [default MySQL dashboard](https://app.datadoghq.com/dash/integration/12/).
 
 ![Default MySQL Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20mysql%20dashboard_2.png "Default MySQL Dashboard")
 
-### Getting started monitoring PHP 
+## Getting started monitoring PHP 
 
 Using the Datadog PHP library, you can measure the performance of your application, for example by timing function calls and counting page loads. You can measure the performance indicators most valuable to you, depending on your application, by strategically adding a small amount of code to your PHP files.
 
-#### Configure the Agent
+### Configure the Agent
 
 To start reporting PHP metrics, create a simple PHP app that requires the Datadog PHP library.
 
@@ -188,13 +188,13 @@ PHP sample code:
 ```
 The Datadog agent is now ready to collect and report data about your PHP application.
 
-#### Generate sample data
+### Generate sample data
 
 Generate some metrics by simulating web traffic with this command:
 
 `for i in {1..99}; do wget http://localhost/index.php; done && rm index.php.*`
 
-#### View PHP metrics in Datadog
+### View PHP metrics in Datadog
 
 To view the PHP application data you've generated, navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `functionTime.duration.avg` in the Graph field.
 
