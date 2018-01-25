@@ -26,9 +26,9 @@ Within your Datadog account settings, you'll need to install integrations for th
 
 Note: as you install each of the integrations listed below, you'll see instructions on configuring and validating each installation. We'll go through those steps in detail below, so at this stage you can scroll to the bottom of the Configuration tab and click "Install Integration."
 
-1. Apache integration (https://app.datadoghq.com/account/settings#integrations/apache)
-1. MySQL integration (https://app.datadoghq.com/account/settings#integrations/mysql)
-1. PHP integration (https://app.datadoghq.com/account/settings#integrations/php)
+1. [Apache integration](https://app.datadoghq.com/account/settings#integrations/apache)
+1. [MySQL integration](https://app.datadoghq.com/account/settings#integrations/mysql)
+1. [PHP integration](https://app.datadoghq.com/account/settings#integrations/php)
 
 ### LAMP server
 
