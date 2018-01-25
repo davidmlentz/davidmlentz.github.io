@@ -60,7 +60,7 @@ At your Ubuntu command line, paste the Agent installation command and hit enter.
 
 ![Waiting for metrics](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Waiting%20for%20metrics_c.png "Waiting for metrics")
 
-Once installation is verified, you'll see a message confirming that the agent is functioning properly.
+Once installation is verified, you'll see a message confirming that the Agent is functioning properly.
 
 ### View host metrics on Datadog
 
