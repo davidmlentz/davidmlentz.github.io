@@ -206,16 +206,19 @@ To learn more about collecting PHP metrics, see the [PHP DataDog StatsD Client o
 
 The steps above used Datadog's Metric Explorer and default dashboards to see some initial metrics. Intead of looking at metrics separately, you can create a custom dashboard, combining relevant metrics to help visualize the performance of your application and its infrastructure.
 
-In [your Datadog account](https://app.datadoghq.com), click Dashboards in the left-side navigation, then click New Dashboard. Type a title for your dashboard in the Dashboard Name field, then click the New TimeBoard button. (The other option here is to create a ScreenBoard. For information on these two types of dashboards, see [this FAQ article](https://help.datadoghq.com/hc/en-us/articles/204580349-What-is-the-difference-between-a-ScreenBoard-and-a-TimeBoard-).)
+In [your Datadog account](https://app.datadoghq.com), click "Dashboards" in the left-side navigation, then click "New Dashboard." Type a title for your dashboard in the "Dashboard Name" field, then click the "New TimeBoard" button. (The other option here is to create a ScreenBoard. For information on these two types of dashboards, see [this FAQ article](https://help.datadoghq.com/hc/en-us/articles/204580349-What-is-the-difference-between-a-ScreenBoard-and-a-TimeBoard-).)
 
 Follow these steps to add graphs to your timeboard to display information about your LAMP application.
 
 1. Drag the Timeseries widget onto the board
-1. Select your visualization: Leave as Timeseries
-1. Choose metrics and events: Change "Get" value to apache.net.hits and click Save
-1. Repeat these steps, but use mysql.performance.queries as the "Get" value
-1. Repeat these steps, but use functionCalls.count as the "Get" value
-1. Repeat these steps, but use functionTime.duration.avg as the "Get" value
+1. Under "Choose metrics and events," change the "Get" value to "apache.net.hits" and click "Save."
+
+Repeat these steps to add three other Timeseries widgets, replacing the "Get" value with the following:
+1. "mysql.performance.queries"
+1. "functionCalls.count"
+1. "functionTime.duration.avg"
+
+The resulting custom dashboard should look like this:
 
 ![Custom Datadog Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/My%20dashboard_2.png "Custom Datadog Dashboard")
 
