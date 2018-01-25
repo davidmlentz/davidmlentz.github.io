@@ -155,7 +155,7 @@ Using the Datadog PHP library, you can measure the performance of your applicati
 To start reporting PHP metrics, create a simple PHP app that requires the Datadog PHP library.
 
 1. Move into your LAMP server's web document root: `cd /var/www/html`
-1. Configure the web app to use the Datadog PHP integration: `composer require datadog/php-datadogstatsd` Note: if you receive an error on this step, Composer may not be installed on your server. Execute this command to install Composer on an Ubuntu host: `sudo apt-get install -y composer php-curl`
+1. Configure the web app to use the Datadog PHP library: `composer require datadog/php-datadogstatsd` Note: if you receive an error on this step, Composer may not be installed on your server. Execute this command to install Composer on an Ubuntu host: `sudo apt-get install -y composer php-curl`
 1. Create a PHP file by pasting the sample code, below: `vi index.php`
 
 PHP sample code:
