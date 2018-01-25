@@ -146,7 +146,7 @@ To see how Datadog displays the metrics you just generated, navigate to the [def
 
 ## Getting started monitoring PHP 
 
-Using the Datadog PHP library, you can measure the performance of your application, for example by timing function calls and counting page loads. You can measure the performance indicators most valuable to you, depending on your application, by strategically adding a small amount of code to your PHP files.
+Using the Datadog PHP library, you can measure application performance indicators&mdash;such as page loads and function speed&mdash;by strategically adding a small amount of code to your PHP files.
 
 ### Configure the Agent
 
