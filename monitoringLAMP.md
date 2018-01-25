@@ -93,9 +93,7 @@ Navigate to Datadog's [default Apache dashboard](https://app.datadoghq.com/scree
 
 ![Default Apache Dashboard](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Default%20apache%20dashboard_2.png "Default Apache Dashboard")
 
-The "Rate of requests" and "Bytes served" graphs should show some data corresponding to the `wget` command you executed above.
-
-Note: if you don't see any metrics reported at this point, you may need to enable Apache's status module, mod_status. See [How to collect Apache performance metrics](https://www.datadoghq.com/blog/collect-apache-performance-metrics/#apache-s-status-module) for more information about mod_status.
+The graphs should show some data corresponding to the `wget` command you executed above. If you don't see any metrics here, you may need to enable Apache's status module, mod_status. See [How to collect Apache performance metrics](https://www.datadoghq.com/blog/collect-apache-performance-metrics/#apache-s-status-module) for more information about mod_status.
 
 ## Getting started monitoring MySQL
 
@@ -132,11 +130,12 @@ Update the `user` and `pass` values in this file to reflect the user and passwor
 Next, restart the agent so your changes take effect:
 `sudo /etc/init.d/datadog-agent restart`
 
-The Datadog Agent is now collecting data about your MySQL server's performance and sending it to your Datadog account.
+The Datadog Agent is now collecting data about your MySQL server's performance.
 
 ### Generate sample data
 
 You can generate some MySQL metrics with this command:
+
 `for i in {1..99}; do mysql -u datadog --password=<mypassword> -e "select now();"; done`
 
 ### View MySQL metrics in Datadog
@@ -195,7 +194,7 @@ Generate some metrics by simulating web traffic with this command:
 
 ### View PHP metrics in Datadog
 
-To view the PHP application data you've generated, navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `functionTime.duration.avg` in the Graph field.
+Navigate to Datadog's [Metric Explorer](https://app.datadoghq.com/metric/explorer) and type `functionTime.duration.avg` in the Graph field.
 
 ![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg_2.png "Metric Explorer for PHP")
 
@@ -203,7 +202,7 @@ To learn more about collecting PHP metrics, see the [PHP DataDog StatsD Client o
 
 ## Creating a custom dashboard in Datadog
 
-The steps above used Datadog's Metric Explorer and default dashboards to see some initial metrics. Intead of looking at metrics separately, you can create a custom dashboard, combining relevant metrics to help visualize the overall performance of your application and its infrastructure.
+A custom dashboard lets you combine whatever metrics are necessary to help visualize the overall performance of your application and its infrastructure.
 
 In [your Datadog account](https://app.datadoghq.com), click "Dashboards" in the left-side navigation, then click "New Dashboard." Type a title for your dashboard in the "Dashboard Name" field, then click the "New TimeBoard" button. (The other option here is to create a ScreenBoard. For information on these two types of dashboards, see [this FAQ article](https://help.datadoghq.com/hc/en-us/articles/204580349-What-is-the-difference-between-a-ScreenBoard-and-a-TimeBoard-).)
 
@@ -227,6 +226,6 @@ You can continue to customize this dashboard by adding any widgets you feel migh
 
 In this short tutorial, you've installed the Datadog Agent on your LAMP host, added Datadog integrations for the LAMP stack, and created a custom dashboard to view application metrics.
 
-The simple examples here demonstrate how to use Datadog to monitor the LAMP stack. As the complexity of your app grows, you can apply these to your growing codebase and infrastructure. Datadog will collect and display your expanding data, helping you visualize the performance of your application and infrastructure.
+The simple examples here demonstrate how to use Datadog to monitor the LAMP stack. As the complexity of your app grows, you can extend these examples to your growing codebase and infrastructure.
 
 Sign up for a free Datadog trial account at [https://www.datadoghq.com](https://www.datadoghq.com).
