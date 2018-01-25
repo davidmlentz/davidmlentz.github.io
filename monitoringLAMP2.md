@@ -32,7 +32,7 @@ Note: as you install each of the integrations listed below, you'll see instructi
 
 ### LAMP server
 
-This guide assumes you have an Ubuntu server configured as a LAMP stack. (The commands below were executed on a virtual server running Ubuntu 16.04. These commands and sample code should work correctly on any similar Debian-based server. If you're using an RPM-based server, you'll need to make the necessary substitutions for the `apt-get` steps.) 
+This guide assumes you have an Ubuntu server configured as a LAMP stack. (The commands below were executed on a virtual server running Ubuntu 16.04. These commands and sample code should work correctly on any Debian-based server. If you're using an RPM-based server, you'll need to make the necessary substitutions for the `apt-get` steps.) 
 
 If your Unbuntu server isn't already running Apache, MySQL, and PHP, follow these steps:
 
