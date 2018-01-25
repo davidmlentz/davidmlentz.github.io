@@ -75,6 +75,7 @@ There's not much to see here yet, but this default dashboard displays the top-le
 ### Configure the Agent
 
 The Agent installation script placed some example configuration files on your server. To begin collecting Apache metrics, copy the Apache example configuration file into place for the Agent to use:
+
 `sudo cp /etc/dd-agent/conf.d/apache.yaml.example /etc/dd-agent/conf.d/apache.yaml`
 
 Next, restart the Agent so your changes take effect:
@@ -82,7 +83,7 @@ Next, restart the Agent so your changes take effect:
 
 ### Generate sample data
 
-You can generate some Apache metrics with the following command. This will request a non-existent page on your server, but the requests will be visible in your Datadog dashboard.
+You can generate some Apache metrics with the following command:
 
 `for i in {1..99}; do wget http://localhost/404.html; done && rm 404.html*`
 
