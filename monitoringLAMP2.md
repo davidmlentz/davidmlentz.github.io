@@ -200,7 +200,7 @@ To view the PHP application data you've generated, navigate to Datadog's [Metric
 
 ![Metric Explorer for PHP](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/Metric%20Explorer%20functionTime.duration.avg_2.png "Metric Explorer for PHP")
 
-To learn more about collecting PHP metrics, see [this GitHub repository.](https://github.com/DataDog/php-datadogstatsd)
+To learn more about collecting PHP metrics, see the [PHP DataDog StatsD Client on GitHub.](https://github.com/DataDog/php-datadogstatsd)
 
 ## Creating a custom dashboard in Datadog
 
