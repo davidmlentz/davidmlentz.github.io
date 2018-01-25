@@ -191,6 +191,7 @@ The Datadog agent is now ready to collect and report data about your PHP applica
 #### Generate sample data
 
 Generate some metrics by simulating web traffic with this command:
+
 `for i in {1..99}; do wget http://localhost/index.php; done && rm index.php.*`
 
 #### View PHP metrics in Datadog
