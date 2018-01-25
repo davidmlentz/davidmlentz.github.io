@@ -204,7 +204,7 @@ To learn more about collecting PHP metrics, see the [PHP DataDog StatsD Client o
 
 ## Creating a custom dashboard in Datadog
 
-The steps above used Datadog's Metric Explorer and default dashboards to see some initial metrics. Intead of looking at metrics separately, you can create a custom dashboard, combining relevant metrics to help visualize the performance the infrastructure and the application.
+The steps above used Datadog's Metric Explorer and default dashboards to see some initial metrics. Intead of looking at metrics separately, you can create a custom dashboard, combining relevant metrics to help visualize the performance of your application and its infrastructure.
 
 In [your Datadog account](https://app.datadoghq.com), click Dashboards in the left-side navigation, then click New Dashboard. Type a title for your dashboard in the Dashboard Name field, then click the New TimeBoard button. (The other option here is to create a ScreenBoard. For information on these two types of dashboards, see [this FAQ article](https://help.datadoghq.com/hc/en-us/articles/204580349-What-is-the-difference-between-a-ScreenBoard-and-a-TimeBoard-).)
 
