@@ -48,7 +48,7 @@ The Agent runs on your host and is responsible for collecting metrics and sendin
 
 Within your Datadog account, you can find an Agent installation command that's customized for your use. This includes your API key, which is necessary to authorize the Agent to send metrics to Datadog.
 
-Navigate to the [Agent installation instructions](https://app.datadoghq.com/account/settings#agent/ubuntu) to see your unique Agent installation string. (Notice the different platforms listed on the left side of the page. As you add infrastructure of various types, this page provides the appropriate Agent installation command for each of them.)
+Navigate to the [Agent installation instructions](https://app.datadoghq.com/account/settings#agent/ubuntu) to see your unique Agent installation string.
 
 ![One-step agent installation](https://github.com/davidmlentz/davidmlentz.github.io/blob/master/1%20step%20install_b.png "One-step agent installation")
 
