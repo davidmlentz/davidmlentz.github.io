@@ -4,7 +4,7 @@
 
 ### What is the LAMP stack?
 
-Web applications of any size have some common requirements: a web server, and usually a database and a server-side language. The LAMP stack&mdash;a combination of Linux, Apache, MySQL and PHP (or alternatively Python)&mdash;is one way to bring together the technologies required to power a scalable and dynamic web application. 
+Web applications of all sizes have some common requirements: a web server, and usually a database and a server-side language. The LAMP stack&mdash;a combination of Linux, Apache, MySQL and PHP (or alternatively Python)&mdash;is one way to bring together the technologies required to power a scalable and dynamic web application. 
 
 ### Why is monitoring the LAMP stack important?
 
