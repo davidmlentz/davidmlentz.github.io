@@ -152,7 +152,7 @@ Using the Datadog PHP library, you can measure the performance of your applicati
 
 #### Configure the Agent
 
-To start measuring PHP metrics, create a simple PHP app and require the Datadog PHP library.
+To start reporting PHP metrics, create a simple PHP app that requires the Datadog PHP library.
 
 Move into your LAMP server's web document root:
 `cd /var/www/html`
