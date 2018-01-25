@@ -102,7 +102,9 @@ Note: if you don't see any metrics reported at this point, you may need to enabl
 
 #### Configure the Agent
 
-To get information about your LAMP stack's database server performance, configure the Agent to report MySQL metrics. (Note: the commands below contain a placeholder password&mdash;`<mypassword>`&mdash;which you should replace with an appropriate password to use with your Datadog MySQL user account.)
+To get information about your LAMP stack's database server performance, configure the Agent to report MySQL metrics. 
+
+Note: the commands below contain a placeholder password&mdash;`<mypassword>`&mdash;which you should replace with an appropriate password to use with your Datadog MySQL user account.
 
 First, connect my MySQL as the root user and execute these queries:
 
