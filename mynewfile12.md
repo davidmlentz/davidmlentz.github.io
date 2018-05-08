@@ -1,10 +1,5 @@
 
 Local edit! in the GitHub UI!
-
-> Written with [StackEdit](https://stackedit.io/).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQ4ODc2MjU4XX0=
--->
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwNTI0NTk1XX0=
+eyJoaXN0b3J5IjpbMTI4ODg5ODI0MCw4NTA1MjQ1OTVdfQ==
 -->
